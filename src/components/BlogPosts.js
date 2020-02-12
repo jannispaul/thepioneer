@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 // import styled from "styled-components"
-// import StandardLayout from "../components/pagelayouts/StandardLayout"
+// import Layout from "../components/pagelayouts/Layout"
 // import SEO from "../components/Seo"
 // import { device } from "../theme/breakpoints"
 

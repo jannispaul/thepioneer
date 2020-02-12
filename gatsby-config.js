@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Die Überstunde – der Feierabend-Podcast mit Marina Weisband und Michael Bröcker`,
+    description: `Die Überstunde das neue Live- und Podcast-Format von Media Pioneer mit Marina Weisband und Michael Bröcker.  Der Erkenntnisgewinn für einen besseren Diskurs in der Gesellschaft. Ein Gast, eine Stunde, ein Thema. In der Überstunde.`,
+    author: `Marina Weisband, Michael Bröcker`,
+    siteUrl: `https://thepioneer.com`,
+    keywords: `Media Pioneer, Podcast, Überstunde, Michael Bröcker, Marina Weisband, Feierabend-Talk, Berlin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
