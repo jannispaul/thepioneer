@@ -22,27 +22,27 @@ const Checkout = class extends React.Component {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ sku: product, quantity: 1 }],
-      successUrl: `http://localhost:8000/page-2/`,
-      cancelUrl: `http://localhost:8000/`,
+      successUrl: `http://localhost:8000/success/`,
+      cancelUrl: `http://localhost:8000/error/`,
     })
     if (error) {
       console.warn("Error:", error)
     }
   }
   render() {
-    const product1 = "sku_GijHEv8twajao0"
-    const product2 = "sku_GijQhjVOrV0STs"
+    const PRODUCT1 = "sku_GijHEv8twajao0"
+    const PRODUCT2 = "sku_GijQhjVOrV0STs"
     return (
       <div>
         <button
           style={buttonStyles}
-          onClick={event => this.redirectToCheckout(event, product1)}
+          onClick={event => this.redirectToCheckout(event, PRODUCT1)}
         >
           Product1
         </button>
         <button
           style={buttonStyles}
-          onClick={event => this.redirectToCheckout(event, product2)}
+          onClick={event => this.redirectToCheckout(event, PRODUCT2)}
         >
           Product2
         </button>
