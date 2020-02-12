@@ -1,40 +1,39 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+
 // import styled from "styled-components"
 // import StandardLayout from "../components/pagelayouts/StandardLayout"
 // import SEO from "../components/Seo"
 // import { device } from "../theme/breakpoints"
 
-const BlogPosts = props => (
-  <div>
-    <h2>Neues von MP</h2>
-    {props.data.allWordpressPost.edges.map(post => {
-      return (
-        <div key={post.node.id}>
-          <p>{post.node.date}</p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: post.node.title,
-            }}
-          ></p>
+const BlogPosts = ({ data }) => {
+  return (
+    <div>
+      <h2>Neues von MP</h2>
+      {data.allWordpressPost.edges.map(post => {
+        return (
+          <div key={post.node.id}>
+            <Img
+              resolutions={
+                post.node.featured_media.localFile.childImageSharp.resolutions
+              }
+              key={post.node.featured_media.id}
+            />
 
-          <a href={post.node.link}>Weiterlesen</a>
-        </div>
-      )
-    })}
-    {/* {props.data.allReviewsYaml.edges.map((review, index) => {
-                        return (
-                            <SingleReview
-                                key={index}
-                                rating={review.node.rating}
-                                name={review.node.name}
-                                date={review.node.date}
-                                review={review.node.review}
-                            />
-                        )
-                    })} */}
-  </div>
-)
+            <p>{post.node.date}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: post.node.title,
+              }}
+            ></p>
+            <a href={post.node.link}>Weiterlesen</a>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
 
 export default props => (
   <StaticQuery
@@ -52,6 +51,18 @@ export default props => (
               title
               date(locale: "de_DE", formatString: "D. MMMM YYYY")
               link
+              featured_media {
+                id
+                localFile {
+                  childImageSharp {
+                    # Try editing the "width" and "height" values.
+                    resolutions(width: 300, height: 200) {
+                      ...GatsbyImageSharpResolutions_withWebp_tracedSVG
+                    }
+                  }
+                }
+                alt_text
+              }
             }
           }
         }
