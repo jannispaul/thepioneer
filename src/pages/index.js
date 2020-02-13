@@ -1,7 +1,6 @@
 import React from "react"
-
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 import Checkout from "../components/Checkout"
 import BlogPosts from "../components/BlogPosts"
 import Countdown from "../components/Countdown"

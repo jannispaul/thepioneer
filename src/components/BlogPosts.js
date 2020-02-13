@@ -1,35 +1,55 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import SingleBlogPost from "../components/SingleBlogPost"
 
-// import styled from "styled-components"
-// import { device } from "../theme/breakpoints"
+import styled from "styled-components"
+import { device } from "../theme/breakpoints"
+
+const StyledSection = styled.section`
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+const StyledH2 = styled.h2`
+  text-align: center;
+`
+
+const StyledGrid = styled.div`
+  max-width: 1280px;
+  margin: auto;
+  /* @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+  } */
+  @media ${device.laptop} {
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+  }
+`
 
 const BlogPosts = ({ data }) => {
   return (
-    <div>
-      <h2>Neues von MP</h2>
-      {data.allWordpressPost.edges.map(post => {
-        return (
-          <div key={post.node.id}>
-            <Img
-              resolutions={
+    <StyledSection>
+      <StyledH2>Aktuelles im Pioneer Blog</StyledH2>
+      <StyledGrid>
+        {data.allWordpressPost.edges.map(post => {
+          return (
+            <SingleBlogPost
+              key={post.node.id}
+              image={
                 post.node.featured_media.localFile.childImageSharp.resolutions
               }
-              key={post.node.featured_media.id}
-            />
-
-            <p>{post.node.date}</p>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: post.node.title,
-              }}
-            ></p>
-            <a href={post.node.link}>Weiterlesen</a>
-          </div>
-        )
-      })}
-    </div>
+              alt={post.node.featured_media.alt_text}
+              date={post.node.date}
+              title={post.node.title}
+              link={post.node.link}
+            ></SingleBlogPost>
+          )
+        })}
+      </StyledGrid>
+    </StyledSection>
   )
 }
 
