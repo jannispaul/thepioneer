@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import Carousel, { Dots } from "@brainhubeu/react-carousel"
+import React from "react"
+import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css"
 import "../theme/carousel.css"
 

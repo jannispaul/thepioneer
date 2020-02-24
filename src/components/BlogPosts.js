@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SingleBlogPost from "../components/SingleBlogPost"
+import PioneerHeadline from "../components/PioneerHeadline"
 
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
@@ -11,9 +12,6 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`
-const StyledH2 = styled.h2`
-  text-align: center;
 `
 
 const StyledGrid = styled.div`
@@ -32,7 +30,7 @@ const StyledGrid = styled.div`
 const BlogPosts = ({ data }) => {
   return (
     <StyledSection>
-      <StyledH2>Aktuelles im Pioneer Blog</StyledH2>
+      <PioneerHeadline>Blog</PioneerHeadline>
       <StyledGrid>
         {data.allWordpressPost.edges.map(post => {
           return (

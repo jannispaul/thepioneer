@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import Slider from "../components/Slider"
+import PioneerHeadline from "../components/PioneerHeadline"
 import WallStreetWeeklyImage from "../components/ImageComponents/WallStreetWeeklyImage"
 import UeberstundeImage from "../components/ImageComponents/UeberstundeImage"
 import BeyondTheObviousImage from "../components/ImageComponents/BeyondTheObviousImage"
 import TheAmericansImage from "../components/ImageComponents/TheAmericansImage"
 import MorningBriefingImage from "../components/ImageComponents/MorningBriefingImage"
-import logo from "../images/logo.svg"
 import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
@@ -30,27 +30,10 @@ const StyledSection = styled.section`
     }
   }
 `
-const StyledH2 = styled.h2`
-  text-align: center;
-  color: #fff;
-  margin-bottom: 16px;
-  @media ${device.tablet} {
-    margin-bottom: 24px;
-  }
-
-  & > img {
-    max-width: 140px;
-    @media ${device.tablet} {
-      max-width: 240px;
-    }
-  }
-`
 
 const HeroVideo = () => (
   <StyledSection>
-    <StyledH2>
-      <img src={logo}></img> Origingals
-    </StyledH2>
+    <PioneerHeadline color="white">Origingals</PioneerHeadline>
     <p>
       Qualitätsjournalismus für eine neue Zeit: Als Briefings, Podcasts und
       Live.
