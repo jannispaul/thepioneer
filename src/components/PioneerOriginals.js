@@ -23,7 +23,7 @@ const StyledSection = styled.section`
     color: white;
     text-align: center;
     margin: 0 auto 40px auto;
-    max-width: 500px;
+    max-width: 526px;
     padding: 0 16px;
 
     @media ${device.tablet} {
@@ -33,7 +33,7 @@ const StyledSection = styled.section`
   }
 `
 
-const HeroVideo = () => (
+const PioneerOriginals = () => (
   <StyledSection>
     <PioneerHeadline color="white">Origingals</PioneerHeadline>
     <p>
@@ -80,4 +80,4 @@ const HeroVideo = () => (
   </StyledSection>
 )
 
-export default HeroVideo
+export default PioneerOriginals

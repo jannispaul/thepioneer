@@ -45,10 +45,14 @@ const TextContainer = styled.div`
   line-height: 1.3;
   grid-column: 2/3;
   position: relative;
-  font-size: 15px;
+  & p {
+    font-size: 15px;
+  }
   @media ${device.tablet} {
     padding: 20px 30px 80px 30px;
-    font-size: 17px;
+    & p {
+      font-size: 17px;
+    }
   }
   @media ${device.laptop} {
     position: inherit;

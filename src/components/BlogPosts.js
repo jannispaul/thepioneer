@@ -12,6 +12,11 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 60px 0 80px 0;
+
+  @media ${device.tablet} {
+    padding: 80px 0 100px 0;
+  }
 `
 
 const StyledGrid = styled.div`

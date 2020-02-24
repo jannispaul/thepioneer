@@ -6,6 +6,8 @@ import BlogPosts from "../components/BlogPosts"
 import Countdown from "../components/Countdown"
 import Hero from "../components/Hero"
 import PioneerOriginals from "../components/PioneerOriginals"
+import PioneerExperience from "../components/PioneerExperience"
+import PioneerOne from "../components/PioneerOne"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +16,8 @@ const IndexPage = () => (
     <Hero></Hero>
     <Checkout></Checkout>
     <PioneerOriginals></PioneerOriginals>
+    <PioneerOne></PioneerOne>
+    <PioneerExperience></PioneerExperience>
     <BlogPosts></BlogPosts>
   </Layout>
 )
