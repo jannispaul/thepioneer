@@ -10,11 +10,11 @@ import PioneerOriginals from "../components/PioneerOriginals"
 const IndexPage = () => (
   <Layout>
     <SEO title="ThePioneer" />
+    <Countdown></Countdown>
     <HeroVideo></HeroVideo>
     <Checkout></Checkout>
     <PioneerOriginals></PioneerOriginals>
     <BlogPosts></BlogPosts>
-    <Countdown></Countdown>
   </Layout>
 )
 

@@ -12,11 +12,11 @@ import { device } from "../theme/breakpoints"
 const StyledSection = styled.section`
   background: #1f1f1f;
   width: 100%;
-  padding: 60px 16px 80px 16px;
   /* padding-bottom: 100px; */
+  padding: 60px 0 80px 0;
 
   @media ${device.tablet} {
-    padding: 80px 16px 100px 16px;
+    padding: 80px 0 100px 0;
   }
 
   & > p {
@@ -24,9 +24,11 @@ const StyledSection = styled.section`
     text-align: center;
     margin: 0 auto 40px auto;
     max-width: 500px;
+    padding: 0 16px;
 
     @media ${device.tablet} {
       margin-bottom: 80px;
+      padding: 0 16px;
     }
   }
 `
