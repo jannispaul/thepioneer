@@ -8,7 +8,7 @@ import "../theme/styles.css"
 
 // import MPPresents from "./MPPresents"
 // import Navigation from "./Navigation"
-// import Footer from "./Footer"
+import Footer from "./Footer"
 import CookieNotice from "../components/CookieNotice"
 
 const Layout = props => {
@@ -28,7 +28,7 @@ const Layout = props => {
       {/* <MPPresents></MPPresents>
       <Navigation siteTitle={data.site.siteMetadata.title} /> */}
       <main>{props.children}</main>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   )
 }
