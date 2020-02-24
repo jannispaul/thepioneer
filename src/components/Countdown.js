@@ -18,6 +18,7 @@ const StyledSection = styled.section`
   flex-direction: column;
   @media ${device.tablet} {
     position: fixed;
+    top: 0;
     flex-direction: row;
   }
 `
