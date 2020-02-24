@@ -1,41 +1,33 @@
 import React, { Component } from "react"
-import Slider from "infinite-react-carousel"
+import Carousel, { Dots } from "@brainhubeu/react-carousel"
+import "@brainhubeu/react-carousel/lib/style.css"
+import "../theme/carousel.css"
 
-const Slider = class extends React.Component {
+const SimpleSlider = class extends React.Component {
   render() {
-    const settings = {
-      centerPadding: 60,
-      slidesToShow: 4,
-    }
     return (
       <div>
-        <span>CustomSlider</span>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-        </Slider>
+        <Carousel
+          centered
+          infinite
+          dots
+          draggable
+          slidesPerPage={4}
+          breakpoints={{
+            1300: { slidesPerPage: 3 },
+            1000: { slidesPerPage: 3.5 },
+            900: { slidesPerPage: 3.5, centered: true },
+            750: { slidesPerPage: 3, centered: true },
+            630: { slidesPerPage: 2, centered: true },
+            450: { slidesPerPage: 1.5, centered: false },
+            350: { slidesPerPage: 1.3, centered: false },
+          }}
+        >
+          {this.props.children}
+        </Carousel>
       </div>
     )
   }
 }
 
-export default Slider
+export default SimpleSlider
