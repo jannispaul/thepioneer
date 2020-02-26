@@ -3,8 +3,9 @@ import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css"
 import "../theme/carousel.css"
 
+//check https://github.com/brainhubeu/react-carousel/issues/287 and update if available
+
 const SimpleSlider = class extends React.Component {
-  componentDidMount() {}
   render() {
     return (
       <div>
