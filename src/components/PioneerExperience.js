@@ -1,18 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Slider from "../components/Slider"
 import PioneerHeadline from "../components/PioneerHeadline"
-import WallStreetWeeklyImage from "../components/ImageComponents/WallStreetWeeklyImage"
-import UeberstundeImage from "../components/ImageComponents/UeberstundeImage"
-import BeyondTheObviousImage from "../components/ImageComponents/BeyondTheObviousImage"
-import TheAmericansImage from "../components/ImageComponents/TheAmericansImage"
-import MorningBriefingImage from "../components/ImageComponents/MorningBriefingImage"
 import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
   background: #fff;
   width: 100%;
-  /* padding-bottom: 100px; */
   padding: 60px 0 80px 0;
 
   @media ${device.tablet} {

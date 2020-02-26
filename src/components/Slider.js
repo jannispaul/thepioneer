@@ -4,6 +4,7 @@ import "@brainhubeu/react-carousel/lib/style.css"
 import "../theme/carousel.css"
 
 const SimpleSlider = class extends React.Component {
+  componentDidMount() {}
   render() {
     return (
       <div>
