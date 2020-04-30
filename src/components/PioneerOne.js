@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PioneerHeadline from "./PioneerHeadline"
 import ScrollContainer from "react-indiana-drag-scroll"
-import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
+import PioneerOneGraphic from "../components/ImageComponents/PioneerOneGraphic"
 import { device } from "../theme/breakpoints"
 
 const StyledSection = styled.section`
@@ -33,7 +33,7 @@ const PioneerOne = () => (
     <PioneerHeadline color="black">One</PioneerHeadline>
     <p>Das erste Redaktionsschiff der Welt: Hightech, High</p>
     <ScrollContainer vertical="false">
-      <PioneerOneImage></PioneerOneImage>
+      <PioneerOneGraphic></PioneerOneGraphic>
     </ScrollContainer>
   </StyledSection>
 )
