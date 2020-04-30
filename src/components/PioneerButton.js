@@ -6,9 +6,10 @@ import PioneerLogo from "./PioneerLogo"
 
 const StyledButton = styled.a`
   background: #1f1f1f;
-  padding: 4px 8px;
+  padding: 8px 12px;
   text-transform: uppercase;
   display: flex;
+  justify-content: center;
   color: white;
   & svg {
     display: block;

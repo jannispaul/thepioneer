@@ -6,12 +6,14 @@ import Hero from "../components/Hero"
 import PioneerOriginals from "../components/PioneerOriginals"
 import PioneerExperience from "../components/PioneerExperience"
 import PioneerOne from "../components/PioneerOne"
+import PrivacyAndAds from "../components/PrivacyAndAds"
 import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="ThePioneer" />
     <Countdown></Countdown>
+    <PrivacyAndAds></PrivacyAndAds>
     <Hero></Hero>
     <PioneerOriginals></PioneerOriginals>
     <PioneerOne></PioneerOne>

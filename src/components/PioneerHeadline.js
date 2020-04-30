@@ -5,6 +5,7 @@ import { device } from "../theme/breakpoints"
 
 const StyledH2 = styled.h2`
   text-align: center;
+  font-weight: 300;
   color: ${props => (props.color ? props.color : "#000")};
   margin-bottom: 16px;
 
@@ -24,7 +25,7 @@ const StyledH2 = styled.h2`
 
 const PioneerHeadline = props => (
   <StyledH2 color={props.color}>
-    <PioneerLogo></PioneerLogo> {props.children}
+    <PioneerLogo fill={props.color}></PioneerLogo> {props.children}
   </StyledH2>
 )
 
