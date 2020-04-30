@@ -7,7 +7,7 @@ import "../theme/font-face.css"
 import "../theme/styles.css"
 
 // import MPPresents from "./MPPresents"
-// import Navigation from "./Navigation"
+import Navigation from "./Navigation"
 import Footer from "./Footer"
 import CookieNotice from "../components/CookieNotice"
 
@@ -24,9 +24,10 @@ const Layout = props => {
 
   return (
     <div>
-      <CookieNotice></CookieNotice>
+      {/* <CookieNotice></CookieNotice> */}
       {/* <MPPresents></MPPresents>
       <Navigation siteTitle={data.site.siteMetadata.title} /> */}
+      <Navigation></Navigation>
       <main>{props.children}</main>
       <Footer></Footer>
     </div>
