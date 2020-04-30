@@ -16,7 +16,7 @@ const PioneerOneImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        pioneerOneImage: file(relativePath: { eq: "pioneer-one.jpg" }) {
+        pioneerOneImage: file(relativePath: { eq: "pioneerone-graphic.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 4000, quality: 70) {
               ...GatsbyImageSharpFluid_withWebp_noBase64

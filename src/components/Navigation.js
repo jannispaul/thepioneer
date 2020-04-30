@@ -3,14 +3,16 @@ import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 
 import PioneerLogo from "./PioneerLogo"
+import PioneerButton from "./PioneerButton"
 
 const StyledNav = styled.nav`
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   position: sticky;
   padding: 16px;
   height: auto;
-  & svg {
+  & > svg {
     display: block;
     max-width: 140px;
     height: auto;
@@ -23,6 +25,7 @@ const StyledNav = styled.nav`
 const Nav = props => (
   <StyledNav>
     <PioneerLogo fill="gradient"></PioneerLogo>
+    <PioneerButton />
   </StyledNav>
 )
 export default Nav
