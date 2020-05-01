@@ -14,7 +14,7 @@ const StyledNav = styled.nav`
   height: auto;
   & > svg {
     display: block;
-    max-width: 140px;
+    max-width: 112px;
     height: auto;
     @media ${device.tablet} {
       max-width: 282px;
@@ -25,7 +25,7 @@ const StyledNav = styled.nav`
 const Nav = props => (
   <StyledNav>
     <PioneerLogo fill="gradient"></PioneerLogo>
-    <PioneerButton />
+    <PioneerButton width="70px" fontSize="12px" />
   </StyledNav>
 )
 export default Nav

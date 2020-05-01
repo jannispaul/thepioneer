@@ -16,6 +16,22 @@
   src: local("Poppins Bold"), local("Poppins-Bold"),
     url("/fonts/Poppins-Bold.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Poppins ExtraBoldItalic"), local("Poppins-ExtraBoldItalic"),
+    url("/fonts/Poppins-ExtraBoldItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noe Text";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Noe Text Regular"), local("NoeTextRegular"),
+    url("/fonts/NoeTextRegular.woff2") format("woff2");
+}
 /* latin-ext */
 /* @font-face {
   font-family: "Open Sans";
@@ -46,7 +62,7 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4 {
@@ -54,18 +70,23 @@ h4 {
     sans-serif;
   line-height: 1.2;
   font-weight: 600;
-}
-h1 {
-  font-size: 32px;
-  color: #030203;
-  margin-bottom: 1rem;
-}
+} */
+h1,
 h2 {
-  font-size: 24px;
-  color: #030203;
-  /* font-weight: 200; */
-  
+  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  display: inline-block;
+  background: -webkit-linear-gradient(180deg, #674480, #9c2c5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 4px;
+  font-size: 30px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
+
 h3 {
   font-size: 26px;
   /* margin-bottom: 12px; */
@@ -79,13 +100,15 @@ h4 {
 }
 p {
   font-size: 16px;
+  font-family: "Noe Text", "Times New Roman", serif;
 }
 small {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 9.8px;
+  color: #8c8c8c;
 }
 
 ul {

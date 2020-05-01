@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
+import PioneerLogo from "./PioneerLogo"
 
 const StyledSection = styled.section`
   position: relative;
@@ -10,7 +11,7 @@ const StyledSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
+  padding: 40px 16px;
   color: white;
   background: rgb(2, 0, 36);
   background-image: linear-gradient(90deg, #6622c3 0%, #a3065e 99%);
@@ -26,17 +27,20 @@ const StyledGrid = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 `
 const TimerCard = styled.div`
-  font-size: 36px;
+  font-size: 60px;
   line-height: 1;
-  padding-top: 2px;
+  padding: 12px 0 12px 0;
   text-align: center;
   color: #1f1f1f;
   background: white;
-  height: 54px;
-  width: 50px;
-  margin: 0 8px;
+  width: 30%;
+  background: #ffffff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1.43px;
   @media ${device.tablet} {
     margin: 0 10px;
     padding-top: 4px;
@@ -45,16 +49,33 @@ const TimerCard = styled.div`
     font-size: 42px;
   }
 
-  & > p {
-    font-size: 10px;
+  & > span {
+    display: block;
+    font-size: 14px;
     color: #8c8c8c;
+    letter-spacing: 1.17px;
+    text-align: center;
+    text-transform: uppercase;
   }
 `
 const Text = styled.p`
+  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  font-weight: 600;
   margin-top: 12px;
-  font-size: 24px;
+  font-size: 21px;
   color: #fff;
   text-align: center;
+  line-height: 1.18;
+  & span {
+    font-weight: 400;
+  }
+  & svg {
+    max-width: 140px;
+    width: 140px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+  }
   @media ${device.tablet} {
     margin-top: 0;
     margin-left: 24px;
@@ -102,20 +123,23 @@ const Countdown = () => {
       <StyledGrid>
         <TimerCard>
           {timeLeft.tage}
-          <p>TAGE</p>
+          <span>Tage</span>
         </TimerCard>
         :
         <TimerCard>
           {timeLeft.stunden}
-          <p>Stunden</p>
+          <span>Std</span>
         </TimerCard>
         :
         <TimerCard>
           {timeLeft.minuten}
-          <p>Minuten</p>
+          <span>Min</span>
         </TimerCard>
       </StyledGrid>
-      <Text>Bis wir in See stechen!</Text>
+      <Text>
+        bis zur Ankunft von <PioneerLogo fill="#fff"></PioneerLogo>{" "}
+        <span>One</span> in Berlin
+      </Text>
     </StyledSection>
   )
 }

@@ -12,9 +12,9 @@ import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
 const IndexPage = () => (
   <Layout>
     <SEO title="ThePioneer" />
+    <Hero></Hero>
     <Countdown></Countdown>
     <PrivacyAndAds></PrivacyAndAds>
-    <Hero></Hero>
     <PioneerOriginals></PioneerOriginals>
     <PioneerOne></PioneerOne>
     <PioneerOneImage></PioneerOneImage>
