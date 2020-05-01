@@ -5,7 +5,7 @@ import PioneerButton from "./PioneerButton"
 import lock from "../images/svgs/lock.svg"
 import noAds from "../images/svgs/no-ads.svg"
 
-const StyledContainer = styled.div`
+const StyledSection = styled.section`
   padding-bottom: 20px;
   span {
     text-transform: uppercase;
@@ -58,7 +58,7 @@ const StyledHeadline = styled.h2`
   }
 `
 const PrivacyAndAds = () => (
-  <StyledContainer>
+  <StyledSection>
     <StyledHalf>
       <img src={lock} alt="" /> <StyledHeadline>Privacy</StyledHeadline>
       <p>
@@ -88,6 +88,6 @@ const PrivacyAndAds = () => (
       <PioneerButton></PioneerButton>
       <span>Wähle selbst, wieviel du beiträgst.</span>
     </StyledButtonContainer>
-  </StyledContainer>
+  </StyledSection>
 )
 export default PrivacyAndAds
