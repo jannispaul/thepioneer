@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Slider from "../components/Slider"
-import PioneerHeadline from "../components/PioneerHeadline"
+import PioneerLogo from "../components/PioneerLogo"
 import WallStreetWeeklyImage from "../components/ImageComponents/WallStreetWeeklyImage"
 import UeberstundeImage from "../components/ImageComponents/UeberstundeImage"
 import BeyondTheObviousImage from "../components/ImageComponents/BeyondTheObviousImage"
@@ -13,7 +13,17 @@ const StyledSection = styled.section`
   background: #1f1f1f;
   width: 100%;
   /* padding-bottom: 100px; */
-  padding: 60px 0 80px 0;
+  padding: 50px 0 80px 0;
+  & > h2 {
+    padding: 0 16px;
+    margin-bottom: 32px;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont,
+      Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
 
   @media ${device.tablet} {
     padding: 80px 0 100px 0;
@@ -32,14 +42,23 @@ const StyledSection = styled.section`
     }
   }
 `
+const StyledH2 = styled.h2`
+  padding: 0 16px;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  font-weight: 400;
+  fonts-style: normal;
+  background: none;
+  -webkit-text-fill-color: #fff;
+`
 
 const PioneerOriginals = () => (
   <StyledSection>
-    <PioneerHeadline color="white">Origingals</PioneerHeadline>
-    <p>
-      Qualitätsjournalismus für eine neue Zeit: Als Briefings, Podcasts und
-      Live.
-    </p>
+    <StyledH2>
+      <PioneerLogo fill="#fff" width="140px"></PioneerLogo> Origingals
+    </StyledH2>
     <Slider>
       <a
         href="https://wall-street-weekly.com/"

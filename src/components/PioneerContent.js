@@ -13,6 +13,7 @@ const StyledSection = styled.section`
     vertical-align: middle;
     margin-bottom: 4px;
   } */
+  overflow: hidden;
   @media ${device.tablet} {
     max-width: 282px;
   }
