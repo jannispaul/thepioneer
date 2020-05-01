@@ -2,41 +2,34 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { device } from "../../theme/breakpoints"
+import { device } from "../../../theme/breakpoints"
 
 const StyledImage = styled(Img)`
   max-width: 200px;
-  max-height: 283px;
+  max-height: 200px;
   @media ${device.laptop} {
     max-width: 310px;
-    max-height: 440px;
+    max-height: 310px;
   }
 `
 
-const HeroImage = () => (
+export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(
-          filter: { relativePath: { eq: "originals/beyond-the-obvious.jpg" } }
-        ) {
-          edges {
-            node {
-              childImageSharp {
-                fixed(width: 310) {
-                  ...GatsbyImageSharpFixed_withWebp_tracedSVG
-                }
-              }
+        file(relativePath: { eq: "originals/beyond-the-obvious.jpg" }) {
+          childImageSharp {
+            fixed(width: 310) {
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
       }
     `}
     render={data => {
-      const image = data.allFile.edges[0].node.childImageSharp
       return (
         <StyledImage
-          fixed={image.fixed}
+          fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
           alt="Mann mit Anzug und Brille auf Poster mit großen Pfeilen als grafische Elemente"
         />
@@ -44,4 +37,3 @@ const HeroImage = () => (
     }}
   />
 )
-export default HeroImage

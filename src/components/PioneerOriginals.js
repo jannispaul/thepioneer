@@ -1,13 +1,16 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 import Slider from "../components/Slider"
 import PioneerLogo from "../components/PioneerLogo"
-import WallStreetWeeklyImage from "../components/ImageComponents/WallStreetWeeklyImage"
-import UeberstundeImage from "../components/ImageComponents/UeberstundeImage"
-import BeyondTheObviousImage from "../components/ImageComponents/BeyondTheObviousImage"
-import TheAmericansImage from "../components/ImageComponents/TheAmericansImage"
-import MorningBriefingImage from "../components/ImageComponents/MorningBriefingImage"
-import { device } from "../theme/breakpoints"
+import WallStreetWeeklyImage from "../components/ImageComponents/Originals/WallStreetWeeklyImage"
+import UeberstundeImage from "../components/ImageComponents/Originals/UeberstundeImage"
+import BeyondTheObviousImage from "../components/ImageComponents/Originals/BeyondTheObviousImage"
+import TheAmericansImage from "../components/ImageComponents/Originals/TheAmericansImage"
+import MorningBriefingImage from "../components/ImageComponents/Originals/MorningBriefingImage"
+import HauptstadtBriefingImage from "../components/ImageComponents/Originals/HauptstadtBriefingImage"
+import TechBriefingImage from "../components/ImageComponents/Originals/TechBriefingImage"
+import DerAchteTagImage from "../components/ImageComponents/Originals/DerAchteTagImage"
 
 const StyledSection = styled.section`
   background: #1f1f1f;
@@ -94,6 +97,15 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <MorningBriefingImage></MorningBriefingImage>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <DerAchteTagImage></DerAchteTagImage>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <HauptstadtBriefingImage></HauptstadtBriefingImage>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <TechBriefingImage></TechBriefingImage>
       </a>
     </Slider>
   </StyledSection>
