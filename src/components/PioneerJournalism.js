@@ -10,12 +10,11 @@ import micImage from "../images/pngs/mikrofon.png"
 const StyledSection = styled.section`
   background: #f8f6fd;
   svg {
-    max-width: 100px;
-    vertical-align: middle;
-    margin-bottom: 4px;
+    /* max-width: 100px; */
+    /* vertical-align: middle; */
+    /* margin-bottom: 4px; */
   }
   @media ${device.tablet} {
-    max-width: 282px;
   }
 `
 const StyledContainer = styled.div`
@@ -71,7 +70,7 @@ const PioneerJournalism = props => (
       <img src={micImage} alt="Airplanes flying away from headline" />
 
       <span>
-        <PioneerLogo width="120px"></PioneerLogo> Journalismus
+        <PioneerLogo width="100px"></PioneerLogo> Journalismus
       </span>
       <h2>Seperating News From Noise</h2>
       <p>
@@ -83,11 +82,11 @@ const PioneerJournalism = props => (
         <li>Täglich neue Briefings, Podcasts, Graphics und Live-Inhalte</li>
         <li>
           Exklusiver Live-Journalismus auf dem ersten Redaktionsschiff der Welt
-          – <PioneerLogo width="80px"></PioneerLogo> <span>One</span>
+          – <PioneerLogo width="100px"></PioneerLogo> <span>One</span>
         </li>
         <li>
           Publikation eigener Inhalte als verifizierter{" "}
-          <PioneerLogo width="80px"></PioneerLogo> Author
+          <PioneerLogo width="100px"></PioneerLogo> Author
         </li>
         <li>Unterstützung neuer journalistischer Projekte</li>
       </ul>

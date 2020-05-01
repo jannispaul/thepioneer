@@ -18,8 +18,8 @@ const IndexPage = () => (
     <Countdown></Countdown>
     <PioneerJournalism></PioneerJournalism>
     <PioneerContent></PioneerContent>
-    <PrivacyAndAds></PrivacyAndAds>
     <PioneerOriginals></PioneerOriginals>
+    <PrivacyAndAds></PrivacyAndAds>
     <PioneerOne></PioneerOne>
     <PioneerOneImage></PioneerOneImage>
     <PioneerExperience></PioneerExperience>

@@ -15,6 +15,7 @@ const StyledButton = styled.a`
   background: #1f1f1f;
   padding: 8px 12px;
   text-transform: uppercase;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   color: white;
@@ -24,19 +25,17 @@ const StyledButton = styled.a`
   & svg {
     display: block;
     max-width: ${props => (props.width ? props.width : "120px")};
-
     height: auto;
     @media ${device.tablet} {
-      max-width: 282px;
     }
   }
 `
 function PioneerButton(props) {
   return (
     <StyledContainer>
-      <StyledButton width={props.width} fontSize={props.fontSize}>
+      <StyledButton href="#" width={props.width} fontSize={props.fontSize}>
         Join&nbsp;&nbsp;
-        <PioneerLogo fill="#fff" />
+        <PioneerLogo fill="#fff" width={props.width} />
       </StyledButton>
       {props.subline ? (
         <small>Entscheide selbst, wie viel du beiträgst.</small>

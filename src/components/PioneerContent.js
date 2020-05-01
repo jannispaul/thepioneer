@@ -8,11 +8,11 @@ import stiftImage from "../images/pngs/stift.png"
 import stifteImage from "../images/pngs/stifte.png"
 
 const StyledSection = styled.section`
-  svg {
+  /* svg {
     max-width: 100px;
     vertical-align: middle;
     margin-bottom: 4px;
-  }
+  } */
   @media ${device.tablet} {
     max-width: 282px;
   }

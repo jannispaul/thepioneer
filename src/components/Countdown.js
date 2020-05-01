@@ -70,12 +70,11 @@ const Text = styled.p`
   & span {
     font-weight: 400;
   }
-  & svg {
-    max-width: 140px;
-    width: 140px;
+  /* & svg {
+    max-width: 130px;
     vertical-align: middle;
-    margin-bottom: 4px;
-  }
+    margin-bottom: 5px;
+  } */
   @media ${device.tablet} {
     margin-top: 0;
     margin-left: 24px;
@@ -137,8 +136,9 @@ const Countdown = () => {
         </TimerCard>
       </StyledGrid>
       <Text>
-        bis zur Ankunft von <PioneerLogo fill="#fff"></PioneerLogo>{" "}
-        <span>One</span> in Berlin
+        bis zur Ankunft von{" "}
+        <PioneerLogo fill="#fff" width="120px"></PioneerLogo> <span>One</span>{" "}
+        in Berlin
       </Text>
     </StyledSection>
   )

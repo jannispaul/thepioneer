@@ -1,4 +1,11 @@
 import React from "react"
+import styled from "styled-components"
+
+const StyledSVG = styled.svg`
+  height: auto;
+  width: 100%;
+  max-width: ${props => (props.maxWidth ? props.maxWidth : "none")};
+`
 
 class PioneerLogo extends React.Component {
   render() {
@@ -11,9 +18,10 @@ class PioneerLogo extends React.Component {
     let fill2 = this.props.fill === "gradient" ? "url(#a)" : fill1
 
     return (
-      <svg
-        width="282"
-        height="38"
+      <StyledSVG
+        // width="282"
+        // height="38"
+        maxWidth={this.props.width}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 282 38"
       >
@@ -33,7 +41,7 @@ class PioneerLogo extends React.Component {
             fill={fill1}
           />
         </g>
-      </svg>
+      </StyledSVG>
     )
   }
 }
