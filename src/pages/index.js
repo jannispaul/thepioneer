@@ -4,6 +4,7 @@ import SEO from "../components/SEO"
 import Hero from "../components/Hero"
 import Countdown from "../components/Countdown"
 import PioneerJournalism from "../components/PioneerJournalism"
+import PioneerContent from "../components/PioneerContent"
 import PioneerOriginals from "../components/PioneerOriginals"
 import PioneerExperience from "../components/PioneerExperience"
 import PioneerOne from "../components/PioneerOne"
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Hero></Hero>
     <Countdown></Countdown>
     <PioneerJournalism></PioneerJournalism>
+    <PioneerContent></PioneerContent>
     <PrivacyAndAds></PrivacyAndAds>
     <PioneerOriginals></PioneerOriginals>
     <PioneerOne></PioneerOne>

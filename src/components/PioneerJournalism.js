@@ -8,6 +8,7 @@ import checkmark from "../images/svgs/checkmark.svg"
 import micImage from "../images/pngs/mikrofon.png"
 
 const StyledSection = styled.section`
+  background: #f8f6fd;
   svg {
     max-width: 100px;
     vertical-align: middle;
