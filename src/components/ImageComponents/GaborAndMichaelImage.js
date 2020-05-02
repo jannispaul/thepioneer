@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { device } from "../../theme/breakpoints"
 
 const StyledImage = styled(Img)`
+  height: 65vw;
   @media ${device.laptop} {
   }
 `

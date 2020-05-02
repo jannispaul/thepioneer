@@ -18,9 +18,6 @@ const StyledSection = styled.section`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   flex-direction: column;
   @media ${device.tablet} {
-    position: fixed;
-    top: 0;
-    flex-direction: row;
   }
 `
 const StyledGrid = styled.div`

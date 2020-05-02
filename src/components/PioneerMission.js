@@ -35,8 +35,9 @@ const StyledContainer = styled.div`
   }
 `
 const StyledIframe = styled.iframe`
-  height: auto;
+  /* height: auto; */
   background: #f0ecf4;
+  height: 50vw;
 
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
   background: #1f1f1f;

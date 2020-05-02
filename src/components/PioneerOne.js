@@ -25,8 +25,6 @@ const StyledSection = styled.section`
   & p {
     margin-bottom: 32px;
     @media ${device.tablet} {
-      margin-bottom: 0;
-      padding: 0 16px;
     }
   }
 `

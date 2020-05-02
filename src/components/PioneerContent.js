@@ -15,7 +15,6 @@ const StyledSection = styled.section`
   } */
   overflow: hidden;
   @media ${device.tablet} {
-    max-width: 282px;
   }
 `
 const StyledContainer = styled.div`

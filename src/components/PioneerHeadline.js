@@ -25,7 +25,6 @@ const StyledH2 = styled.h2`
     max-width: 140px;
     height: auto;
     @media ${device.tablet} {
-      max-width: 282px;
     }
   }
 `

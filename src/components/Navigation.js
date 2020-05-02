@@ -17,7 +17,6 @@ const StyledNav = styled.nav`
     max-width: 112px;
     height: auto;
     @media ${device.tablet} {
-      max-width: 282px;
     }
   }
 `

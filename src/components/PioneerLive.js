@@ -12,7 +12,6 @@ const StyledSection = styled.section`
   padding: 60px 16px 80px 16px;
 
   @media ${device.tablet} {
-    padding: 80px 0 100px 0;
   }
 
   & > p {
@@ -23,8 +22,6 @@ const StyledSection = styled.section`
     padding: 0 16px;
 
     @media ${device.tablet} {
-      margin-bottom: 80px;
-      padding: 0 16px;
     }
   }
 `

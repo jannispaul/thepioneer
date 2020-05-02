@@ -9,11 +9,6 @@ import micImage from "../images/pngs/mikrofon.png"
 
 const StyledSection = styled.section`
   background: #f8f6fd;
-  svg {
-    /* max-width: 100px; */
-    /* vertical-align: middle; */
-    /* margin-bottom: 4px; */
-  }
   @media ${device.tablet} {
   }
 `
