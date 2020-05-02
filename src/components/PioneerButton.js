@@ -35,7 +35,7 @@ function PioneerButton(props) {
     <StyledSection>
       <StyledButton
         href="#"
-        // width={props.width}
+        width={props.width}
         fontSize={props.fontSize}
         background={props.background}
         color={props.color}
@@ -46,11 +46,7 @@ function PioneerButton(props) {
           width={props.width}
         />
       </StyledButton>
-      {props.subline ? (
-        <small>Entscheide selbst, wie viel du beiträgst.</small>
-      ) : (
-        ""
-      )}
+      {props.subline ? <small>Wähle selbst, wie viel du beiträgst.</small> : ""}
     </StyledSection>
   )
 }

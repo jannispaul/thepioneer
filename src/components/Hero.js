@@ -8,6 +8,7 @@ const StyledSection = styled.section`
   display: block;
   position: relative;
   width: 100%;
+  background: #f3eefb;
   @media ${device.tablet} {
   }
 `

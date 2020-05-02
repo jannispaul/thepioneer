@@ -85,8 +85,7 @@ const PrivacyAndAds = () => (
       </p>
     </StyledOtherHalf>
     <StyledButtonContainer>
-      <PioneerButton></PioneerButton>
-      <span>Wähle selbst, wieviel du beiträgst.</span>
+      <PioneerButton subline></PioneerButton>
     </StyledButtonContainer>
   </StyledSection>
 )
