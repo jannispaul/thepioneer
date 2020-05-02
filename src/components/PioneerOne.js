@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 import PioneerHeadline from "./PioneerHeadline"
 import ScrollContainer from "react-indiana-drag-scroll"
 import PioneerOneGraphic from "../components/ImageComponents/PioneerOneGraphic"
-import { device } from "../theme/breakpoints"
+import PioneerButton from "./PioneerButton"
 
 const StyledSection = styled.section`
   background: #fff;
@@ -14,24 +15,33 @@ const StyledSection = styled.section`
     padding: 80px 0 100px 0;
   }
 
-  & > p {
-    color: #000;
-    text-align: center;
-    margin: 0 auto 40px auto;
-    max-width: 500px;
-    padding: 0 16px;
-
+  & p {
+    margin-bottom: 32px;
     @media ${device.tablet} {
       margin-bottom: 0;
       padding: 0 16px;
     }
   }
 `
-
+const ContentContainer = styled.div`
+  padding: 16px;
+  margin-bottom: 20px;
+`
 const PioneerOne = () => (
   <StyledSection>
-    <PioneerHeadline color="black">One</PioneerHeadline>
-    <p>Das erste Redaktionsschiff der Welt: Hightech, High</p>
+    <ContentContainer>
+      <PioneerHeadline color="black">One</PioneerHeadline>
+      <h2>Live-Journalismus im Herzen der Hauptstadt</h2>
+      <p>
+        Herzlich Willkommen auf ThePioneer One. An Bord des ersten
+        Redaktionsschiffs der Welt begeben wir uns auf eine Expedition in die
+        Erkenntnis und suchen gemeinsam nach unbequemen Wahrheiten. Bei mehreren
+        Live-Events pro Woche diskutieren wir gemeinsam mit Ihnen – und
+        verwandeln den schwimmenden Newsroom so zum demokratischsten Ort des
+        Landes.
+      </p>
+      <PioneerButton subline></PioneerButton>
+    </ContentContainer>
     <ScrollContainer vertical="false">
       <PioneerOneGraphic></PioneerOneGraphic>
     </ScrollContainer>

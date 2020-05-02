@@ -4,26 +4,26 @@ import { device } from "../theme/breakpoints"
 
 import PioneerLogo from "./PioneerLogo"
 
-const StyledContainer = styled.div`
+const StyledSection = styled.div`
   & > small {
-    text-align: center;
-    margin-top: 4px;
+    /* text-align: center; */
+    margin-top: 10px;
     display: block;
   }
 `
 const StyledButton = styled.a`
-  background: #1f1f1f;
+  background: ${props => (props.background ? props.background : "#1f1f1f")};
   padding: 8px 12px;
   text-transform: uppercase;
   text-decoration: none;
-  display: flex;
+  display: inline;
   justify-content: center;
-  color: white;
+  color: ${props => (props.color ? props.color : "#fff")};
   font-size: ${props => (props.fontSize ? props.fontSize : "21px")};
   font-weight: 600;
 
   & svg {
-    display: block;
+    display: inline-block;
     max-width: ${props => (props.width ? props.width : "120px")};
     height: auto;
     @media ${device.tablet} {
@@ -32,17 +32,26 @@ const StyledButton = styled.a`
 `
 function PioneerButton(props) {
   return (
-    <StyledContainer>
-      <StyledButton href="#" width={props.width} fontSize={props.fontSize}>
+    <StyledSection>
+      <StyledButton
+        href="#"
+        // width={props.width}
+        fontSize={props.fontSize}
+        background={props.background}
+        color={props.color}
+      >
         Join&nbsp;&nbsp;
-        <PioneerLogo fill="#fff" width={props.width} />
+        <PioneerLogo
+          fill={props.fill ? props.fill : "#fff"}
+          width={props.width}
+        />
       </StyledButton>
       {props.subline ? (
         <small>Entscheide selbst, wie viel du beiträgst.</small>
       ) : (
         ""
       )}
-    </StyledContainer>
+    </StyledSection>
   )
 }
 

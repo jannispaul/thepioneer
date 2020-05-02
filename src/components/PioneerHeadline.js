@@ -5,6 +5,13 @@ import { device } from "../theme/breakpoints"
 
 const StyledH2 = styled.h2`
   text-align: center;
+  font-style: normal;
+  /* padding: 0 16px; */
+  font-size: 24px;
+  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  background: none;
+  -webkit-text-fill-color: #000;
   font-weight: 300;
   color: ${props => (props.color ? props.color : "#000")};
   margin-bottom: 16px;

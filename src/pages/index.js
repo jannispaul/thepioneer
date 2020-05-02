@@ -6,7 +6,7 @@ import Countdown from "../components/Countdown"
 import PioneerJournalism from "../components/PioneerJournalism"
 import PioneerContent from "../components/PioneerContent"
 import PioneerOriginals from "../components/PioneerOriginals"
-import PioneerExperience from "../components/PioneerExperience"
+import PioneerLive from "../components/PioneerLive"
 import PioneerOne from "../components/PioneerOne"
 import PrivacyAndAds from "../components/PrivacyAndAds"
 import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
@@ -19,10 +19,10 @@ const IndexPage = () => (
     <PioneerJournalism></PioneerJournalism>
     <PioneerContent></PioneerContent>
     <PioneerOriginals></PioneerOriginals>
-    <PrivacyAndAds></PrivacyAndAds>
-    <PioneerOne></PioneerOne>
     <PioneerOneImage></PioneerOneImage>
-    <PioneerExperience></PioneerExperience>
+    <PioneerOne></PioneerOne>
+    <PioneerLive></PioneerLive>
+    <PrivacyAndAds></PrivacyAndAds>
   </Layout>
 )
 

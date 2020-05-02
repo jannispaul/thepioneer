@@ -18,6 +18,9 @@ const StyledSection = styled.section`
   /* padding-bottom: 100px; */
   padding: 50px 0 80px 0;
   & > h2 {
+    display: block;
+    text-align: center;
+    margin: auto;
     padding: 0 16px;
     margin-bottom: 32px;
     color: #fff;
@@ -52,7 +55,7 @@ const StyledH2 = styled.h2`
   font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
     sans-serif;
   font-weight: 400;
-  fonts-style: normal;
+  font-style: normal;
   background: none;
   -webkit-text-fill-color: #fff;
 `
