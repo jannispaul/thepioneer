@@ -13,14 +13,19 @@ const StyledSection = styled.section`
   position: relative;
   width: 100%;
   background: #f3eefb;
-  @media ${device.tablet} {
-  }
 `
 const Container = styled.div`
   max-width: 1168px;
   margin: auto;
   padding: 16px;
   position: relative;
+
+  @media ${device.tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 24px 0;
+  }
+
   p {
     margin-bottom: 20px;
   }
@@ -33,14 +38,29 @@ const Container = styled.div`
     z-index: 10;
     position: absolute;
   }
-  @media ${device.tablet} {
-    padding: 48px 16px;
-  }
 `
 const StyledH1 = styled.h1``
 const VideoContainer = styled.div`
   position: relative;
   width: 100%;
+  @media ${device.tablet} {
+    width: 50%;
+    order: 2;
+  }
+`
+const ContentContainer = styled.div`
+  @media ${device.tablet} {
+    order: 1;
+    max-width: 50%;
+  }
+`
+const ShipContainer = styled.div`
+  @media ${device.tablet} {
+    order: 3;
+    width: 100%;
+    margin-top: -50px;
+    margin-bottom: -20px;
+  }
 `
 
 const HeroVideo = () => (
@@ -60,13 +80,17 @@ const HeroVideo = () => (
         </video>
         <HeroPlaceHolderImage></HeroPlaceHolderImage>
       </VideoContainer>
-      <HeroShipImage></HeroShipImage>
-      <Waves></Waves>
-      <StyledH1>Wahrheit gibt es nur zu zweien.</StyledH1>
-      <p>
-        Zusammen mit Ihnen. Gemeinsam können wir den Journalismus neu beleben.
-      </p>
-      <PioneerButton subline></PioneerButton>
+      <ShipContainer>
+        <HeroShipImage></HeroShipImage>
+        <Waves></Waves>
+      </ShipContainer>
+      <ContentContainer>
+        <StyledH1>Wahrheit gibt es nur zu zweien.</StyledH1>
+        <p>
+          Zusammen mit Ihnen. Gemeinsam können wir den Journalismus neu beleben.
+        </p>
+        <PioneerButton subline></PioneerButton>
+      </ContentContainer>
     </Container>
   </StyledSection>
 )

@@ -6,9 +6,11 @@ import PioneerLogo from "./PioneerLogo"
 
 const StyledSection = styled.div`
   & > small {
-    /* text-align: center; */
     margin-top: 10px;
     display: block;
+    @media ${device.tablet} {
+      margin-top: 18px;
+    }
   }
 `
 const StyledButton = styled.a`
@@ -21,12 +23,17 @@ const StyledButton = styled.a`
   color: ${props => (props.color ? props.color : "#fff")};
   font-size: ${props => (props.fontSize ? props.fontSize : "21px")};
   font-weight: 600;
+  @media ${device.tablet} {
+    padding: 12px 21px;
+    font-size: ${props => (props.fontSize ? props.fontSize : "30px")};
+  }
 
   & svg {
     display: inline-block;
     max-width: ${props => (props.width ? props.width : "120px")};
     height: auto;
     @media ${device.tablet} {
+      max-width: 168px;
     }
   }
 `

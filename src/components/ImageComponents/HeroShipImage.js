@@ -5,20 +5,22 @@ import styled from "styled-components"
 import { device } from "../../theme/breakpoints"
 
 const StyledImage = styled(Img)`
-  margin: -30px 0 0 -60px;
+  margin: -30px 0 0 -100px;
   z-index: 0;
   width: 120%;
   animation: rotating 2s alternate infinite;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
+    width: 100%;
+    margin: 0;
   }
-
   @keyframes rotating {
-  from {
-    transform: rotate(-0.5deg);
-  }
-  to {
-    transform: rotate(0.5deg);
+    from {
+      transform: rotate(-0.5deg);
+    }
+    to {
+      transform: rotate(0.5deg);
+    }
   }
 `
 
