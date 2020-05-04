@@ -26,6 +26,9 @@ const StyledGrid = styled.div`
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
+  @media ${device.tablet} {
+    max-width: 400px;
+  }
 `
 const TimerCard = styled.div`
   font-size: 60px;
@@ -39,11 +42,6 @@ const TimerCard = styled.div`
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
   border-radius: 1.43px;
   @media ${device.tablet} {
-    margin: 0 10px;
-    padding-top: 4px;
-    height: 64px;
-    width: 60px;
-    font-size: 42px;
   }
 
   & > span {
@@ -67,20 +65,15 @@ const Text = styled.p`
   & span {
     font-weight: 400;
   }
-  /* & svg {
-    max-width: 130px;
-    vertical-align: middle;
-    margin-bottom: 5px;
-  } */
+
   @media ${device.tablet} {
     margin-top: 0;
-    margin-left: 24px;
-    font-size: 32px;
+    font-size: 22px;
   }
 `
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date("2020-06-21") - +new Date()
+    const difference = +new Date("2020-05-18") - +new Date()
     let timeLeft = {}
 
     if (difference > 0) {
