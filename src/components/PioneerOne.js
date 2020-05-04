@@ -36,7 +36,6 @@ const ContentContainer = styled.div`
     right: 0;
     width: 110px;
     top: 50px;
-    user-drag: none;
     user-select: none;
     transform: rotate(-15deg);
     z-index: 0;
@@ -58,7 +57,7 @@ const PioneerOne = () => (
       </p>
       <PioneerButton subline></PioneerButton>
     </ContentContainer>
-    <ScrollContainer vertical="false">
+    <ScrollContainer>
       <PioneerOneGraphic></PioneerOneGraphic>
     </ScrollContainer>
   </StyledSection>

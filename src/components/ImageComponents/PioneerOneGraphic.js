@@ -33,7 +33,6 @@ const PioneerOneGraphic = () => (
         <StyledImage
           fluid={image.fluid}
           imgStyle={{ objectFit: "cover" }}
-          draggable="false"
           alt="Redaktionsschiff Pioneer One im Querschnitt mit Fotos dder Innenansicht"
         />
       )

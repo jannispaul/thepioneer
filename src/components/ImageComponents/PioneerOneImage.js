@@ -28,7 +28,6 @@ const PioneerOneImage = () => (
         <StyledImage
           fluid={image.fluid}
           imgStyle={{ objectFit: "cover" }}
-          draggable="false"
           alt="Redaktionsschiff Pioneer One"
         />
       )
