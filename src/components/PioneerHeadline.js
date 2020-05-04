@@ -3,10 +3,8 @@ import styled from "styled-components"
 import PioneerLogo from "./PioneerLogo"
 import { device } from "../theme/breakpoints"
 
-const StyledH2 = styled.h2`
-  text-align: center;
+const StyledHeadline = styled.span`
   font-style: normal;
-  /* padding: 0 16px; */
   font-size: 24px;
   font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
     sans-serif;
@@ -30,9 +28,9 @@ const StyledH2 = styled.h2`
 `
 
 const PioneerHeadline = props => (
-  <StyledH2 color={props.color}>
+  <StyledHeadline color={props.color}>
     <PioneerLogo fill={props.color}></PioneerLogo> {props.children}
-  </StyledH2>
+  </StyledHeadline>
 )
 
 export default PioneerHeadline

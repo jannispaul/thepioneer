@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 
+import PioneerHeadline from "./PioneerHeadline"
 import PioneerLogo from "./PioneerLogo"
 import PioneerButton from "./PioneerButton"
 import confettiImage from "../images/pngs/konfetti.png"
@@ -14,13 +15,14 @@ const StyledSection = styled.section`
 const StyledContainer = styled.div`
   padding: 40px 16px;
   position: relative;
+  max-width: 1168px;
+  margin: auto;
 
   img:first-of-type {
     position: absolute;
     right: -10px;
     width: 150px;
     top: 20px;
-    user-drag: none;
     transform: scaleX(-1);
     z-index: 0;
   }
@@ -32,26 +34,62 @@ const StyledContainer = styled.div`
   h2 {
     z-index: 1;
     position: relative;
+    display: block;
+  }
+
+  @media ${device.laptop} {
+    padding: 80px 32px;
+
+    h2 {
+      max-width: 660px;
+      margin-bottom: 40px;
+    }
+    p {
+      margin-bottom: 50px;
+      max-width: 500px;
+    }
+    img:first-of-type {
+      /* left: calc(-50vw + 584px); */
+      left: 0;
+      margin-left: calc(-50vw + 500px);
+      width: 18vw;
+      top: 60px;
+      transform: scaleX(1);
+    }
   }
 `
 const StyledIframe = styled.iframe`
-  /* height: auto; */
   background: #f0ecf4;
   height: 50vw;
 
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
   background: #1f1f1f;
   margin-bottom: 20px;
+  @media ${device.tablet} {
+    width: 40vw;
+    max-height: 25vw;
+  }
+  @media ${device.laptop} {
+    max-width: 569px;
+    height: 319px;
+    float: right;
+    box-shadow: 0 2px 22px rgba(0, 0, 0, 0.12);
+  }
 `
 
 const PioneerJournalism = props => (
   <StyledSection>
     <StyledContainer>
       <img src={confettiImage} alt="Bleistift" />
-      <span>
+      <PioneerHeadline color="black">Mission</PioneerHeadline>
+
+      {/* <span>
         <PioneerLogo width="100px"></PioneerLogo> Mission
-      </span>
-      <h2>Celebrate the opinion of others!</h2>
+      </span> */}
+      <h2>
+        Celebrate the <wbr />
+        opinion of others!
+      </h2>
       <StyledIframe
         width="560"
         height="315"
