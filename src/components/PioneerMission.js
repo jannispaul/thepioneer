@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 
 import PioneerHeadline from "./PioneerHeadline"
-import PioneerLogo from "./PioneerLogo"
+// import PioneerLogo from "./PioneerLogo"
 import PioneerButton from "./PioneerButton"
 import confettiImage from "../images/pngs/konfetti.png"
 

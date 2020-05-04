@@ -6,7 +6,13 @@ import { device } from "../../theme/breakpoints"
 
 const StyledImage = styled(Img)`
   height: 65vw;
+  @media ${device.tablet} {
+  }
   @media ${device.laptop} {
+    width: 50vw;
+    height: 100%;
+    margin-left: calc(-50vw + 540px);
+    margin-right: 100px;
   }
 `
 

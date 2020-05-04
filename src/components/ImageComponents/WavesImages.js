@@ -9,6 +9,7 @@ const StyledContainer = styled.div`
   margin: -10px -16px 20px;
   width: 100vw;
   height: 10px;
+  overflow: hidden;
 
   div:first-of-type {
     background: url(${wave1}) repeat-x;

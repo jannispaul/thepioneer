@@ -4,6 +4,7 @@ import PioneerLogo from "./PioneerLogo"
 import { device } from "../theme/breakpoints"
 
 const StyledHeadline = styled.span`
+  display: block;
   font-style: normal;
   font-size: 24px;
   font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,

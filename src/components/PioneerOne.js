@@ -17,14 +17,16 @@ const StyledSection = styled.section`
     z-index: 1;
     position: relative;
   }
-
+  p {
+    margin-bottom: 32px;
+  }
   @media ${device.tablet} {
     padding: 80px 0 100px 0;
-  }
-
-  & p {
-    margin-bottom: 32px;
-    @media ${device.tablet} {
+    h2 {
+      max-width: 800px;
+    }
+    p {
+      max-width: 500px;
     }
   }
 `
@@ -39,6 +41,18 @@ const ContentContainer = styled.div`
     user-select: none;
     transform: rotate(-15deg);
     z-index: 0;
+  }
+  @media ${device.tablet} {
+    max-width: 1168px;
+    margin: auto;
+
+    & > img {
+      left: 0;
+      width: 12vw;
+      top: 50px;
+      transform: rotate(0deg);
+      transform: scaleX(-1);
+    }
   }
 `
 const PioneerOne = () => (

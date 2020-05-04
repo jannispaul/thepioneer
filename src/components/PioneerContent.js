@@ -8,11 +8,6 @@ import stiftImage from "../images/pngs/stift.png"
 import stifteImage from "../images/pngs/stifte.png"
 
 const StyledSection = styled.section`
-  /* svg {
-    max-width: 100px;
-    vertical-align: middle;
-    margin-bottom: 4px;
-  } */
   overflow: hidden;
   @media ${device.tablet} {
   }
@@ -57,6 +52,10 @@ const StyledContainer = styled.div`
       text-transform: uppercase;
       font-weight: 400;
     }
+  }
+  @media ${device.tablet} {
+    max-width: 1168px;
+    margin: auto;
   }
 `
 
