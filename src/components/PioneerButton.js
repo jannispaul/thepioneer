@@ -9,6 +9,8 @@ import { ICONS } from "../theme/Icons"
 const StyledContainer = styled.div`
   transform-origin: 100% 50%;
   transform: ${props => (props.small ? "scale(0.7)" : "scale(1)")};
+  display: inline-block;
+
   & > small {
     margin-top: 10px;
     display: block;

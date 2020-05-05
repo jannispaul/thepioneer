@@ -18,7 +18,7 @@ const StyledHeadline = styled.span`
 
   @media ${device.tablet} {
     transform: ${props => (props.large ? "scale(1.7)" : "scale(1)")};
-    margin-bottom: ${props => (props.large ? "64px" : "24px")};
+    margin-bottom: ${props => (props.large ? "64px" : "12px")};
   }
 
   & svg {

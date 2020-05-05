@@ -12,7 +12,7 @@ const StyledSection = styled.section`
   background: #f8f6fd;
   overflow: hidden;
   @media ${device.tablet} {
-    padding: 60px 32px;
+    padding: 0 32px 60px 32px;
   }
   @media ${device.laptop} {
     padding: 60px 32px;
@@ -34,12 +34,14 @@ const StyledContainer = styled.div`
     right: 0;
     width: 60px;
     top: 100px;
-    user-drag: none;
-    user-select: none;
+    z-index: 0;
   }
 
   & p {
     margin-bottom: 20px;
+    max-width: 700px;
+    z-index: 1;
+    position: relative;
   }
 
   & li {
@@ -70,6 +72,15 @@ const StyledContainer = styled.div`
     margin-right: 8px;
   }
   @media ${device.tablet} {
+    padding: 40px 0;
+    & li {
+      font-size: 18px;
+    }
+    img {
+      margin-right: -32px;
+      width: 15vw;
+      top: 50px;
+    }
   }
   @media ${device.laptop} {
     max-width: 55%;
@@ -78,8 +89,7 @@ const StyledContainer = styled.div`
     }
     img {
       position: absolute;
-      right: calc(540px - 50vw);
-      /* margin-right: calc(50vw + 584px); */
+      right: calc(580px - 50vw);
       width: 15vw;
       top: 100px;
     }

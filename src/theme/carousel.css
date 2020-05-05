@@ -188,7 +188,7 @@
 .BrainhubCarousel__arrow--disable {
   pointer-events: none;
 }
-li {
+.BrainhubCarousel__dots li {
   font-size: 0;
 }
 

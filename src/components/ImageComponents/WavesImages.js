@@ -14,18 +14,20 @@ const StyledContainer = styled.div`
   div:first-of-type {
     background: url(${wave1}) repeat-x;
     animation: waves 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-    /* transform: translate3d(0, 0, 0); */
   }
   div:last-of-type {
     background: url(${wave2}) repeat-x;
     animation: waves 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-    /* transform: translate3d(0, 0, 0); */
+    /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+        swell 7s ease -1.25s infinite;
+      opacity: 1; */
   }
   div {
     position: absolute;
     width: 640px;
     height: 100%;
-    background-size: contain !important;
+    background-size: contain;
+    transform: translate3d(0, 0, 0);
   }
 
   @media ${device.tablet} {
@@ -39,13 +41,18 @@ const StyledContainer = styled.div`
     height: 50px;
     & > div {
       margin: 0;
-      width: 300vw;
+      width: 6400px;
+      transform: translate3d(0, 0, 0);
     }
     div:first-of-type {
-      animation: waves 14s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+      animation: waves 14s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite,
+        swell 7s ease -1.25s infinite;
     }
     div:last-of-type {
       animation: waves 29s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+      /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+        swell 7s ease -1.25s infinite;
+      opacity: 1; */
     }
   }
   @media ${device.laptop} {
@@ -61,14 +68,22 @@ const StyledContainer = styled.div`
       margin-left: -160px;
     }
   }
-
+  @keyframes swell {
+    0%,
+    100% {
+      transform: translate3d(0, 4px, 0);
+    }
+    50% {
+      transform: translate3d(0, 0px, 0);
+    }
+  }
   @media ${device.tablet} {
     @keyframes waves {
       0% {
         margin-left: 0;
       }
       100% {
-        margin-left: -150vw;
+        margin-left: -1600px;
       }
     }
   }

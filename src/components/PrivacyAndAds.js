@@ -33,11 +33,11 @@ const StyledHalf = styled.div`
     padding: 80px 32px 200px;
     & > div {
       max-width: 500px;
-      float: right;
     }
   }
   @media ${device.laptop} {
     & > div {
+      float: right;
       margin-right: 50px;
     }
   }

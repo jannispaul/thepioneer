@@ -37,6 +37,9 @@ const StyledContainer = styled.div`
     display: block;
   }
 
+  @media ${device.tablet} {
+    padding: 40px 32px;
+  }
   @media ${device.laptop} {
     padding: 80px 32px;
 

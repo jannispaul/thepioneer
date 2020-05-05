@@ -20,7 +20,6 @@ const StyledSection = styled.section`
     margin-bottom: 32px;
   }
   @media ${device.tablet} {
-    padding: 80px 0 100px 0;
     h2 {
       max-width: 800px;
     }
@@ -44,7 +43,14 @@ const ContentContainer = styled.div`
   @media ${device.tablet} {
     max-width: 1168px;
     margin: auto;
+    padding: 32px;
 
+    & > img {
+      width: 15vw;
+      top: 50px;
+    }
+  }
+  @media ${device.laptop} {
     & > img {
       left: 0;
       width: 12vw;

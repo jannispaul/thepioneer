@@ -56,6 +56,7 @@ const StyledContainer = styled.div`
   @media ${device.tablet} {
     max-width: 1168px;
     margin: auto;
+    padding: 40px 32px;
   }
 `
 

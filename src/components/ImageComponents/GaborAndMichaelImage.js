@@ -7,6 +7,8 @@ import { device } from "../../theme/breakpoints"
 const StyledImage = styled(Img)`
   height: 65vw;
   @media ${device.tablet} {
+    height: 450px;
+    margin: 0 -32px;
   }
   @media ${device.laptop} {
     width: 50vw;
