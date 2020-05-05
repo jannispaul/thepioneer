@@ -8,6 +8,7 @@ import PioneerButton from "./PioneerButton"
 const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   position: sticky;
   padding: 16px;
@@ -15,7 +16,7 @@ const StyledNav = styled.nav`
   & > svg {
     display: block;
     max-width: 112px;
-    height: auto;
+    max-height: 16px;
   }
   @media ${device.tablet} {
     max-width: 1168px;
@@ -24,12 +25,14 @@ const StyledNav = styled.nav`
 
     & > svg {
       max-width: 200px;
+      max-height: 28px;
     }
   }
   @media ${device.laptop} {
-    padding: 36px 32px;
+    padding: 32px 32px;
     & > svg {
       max-width: 280px;
+      max-height: 38px;
     }
   }
 `

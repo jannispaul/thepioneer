@@ -7,6 +7,14 @@
   src: local("Poppins Regular"), local("Poppins-Regular"),
     url("/fonts/Poppins-Regular.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Poppins Light"), local("Poppins-Light"),
+    url("/fonts/Poppins-Light.woff2") format("woff2");
+}
 
 @font-face {
   font-family: "Poppins";
