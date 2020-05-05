@@ -18,14 +18,14 @@ const CookieNotice = () => (
       buttonText="Verstanden"
       cookieName="WallStreetWeeklyCookieNoticeAccepted"
       style={{
-        background: "#e8edfa",
-        color: "black",
-        position: "relative",
+        background: "#f3eefb",
+        color: "#1f1f1f",
+
         zIndex: "200",
         display: "flex",
       }}
       buttonStyle={{
-        background: "black",
+        background: "#1f1f1f",
         color: "#e8edfa",
         fontWeight: "600",
         fontSize: "18px",
@@ -38,7 +38,7 @@ const CookieNotice = () => (
       Diese Website nutzt Cookies um Ihr Erlebnis zu verbessern.{" "}
       <a
         href="https://mediapioneer.com/datenschutz"
-        style={{ color: "black" }}
+        style={{ color: "#1f1f1f" }}
         aria-label="Link zum Datenschutz"
       >
         Mehr erfahren

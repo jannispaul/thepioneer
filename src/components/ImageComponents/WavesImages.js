@@ -18,9 +18,6 @@ const StyledContainer = styled.div`
   div:last-of-type {
     background: url(${wave2}) repeat-x;
     animation: waves 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-    /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-        swell 7s ease -1.25s infinite;
-      opacity: 1; */
   }
   div {
     position: absolute;
@@ -47,12 +44,12 @@ const StyledContainer = styled.div`
     div:first-of-type {
       animation: waves 14s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite,
         swell 7s ease -1.25s infinite;
+      /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+          swell 7s ease -1.25s infinite;
+        opacity: 1; */
     }
     div:last-of-type {
       animation: waves 29s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-      /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-        swell 7s ease -1.25s infinite;
-      opacity: 1; */
     }
   }
   @media ${device.laptop} {

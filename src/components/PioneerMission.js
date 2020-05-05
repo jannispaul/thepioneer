@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 
 import PioneerHeadline from "./PioneerHeadline"
-// import PioneerLogo from "./PioneerLogo"
 import PioneerButton from "./PioneerButton"
 import confettiImage from "../images/pngs/konfetti.png"
 
@@ -84,11 +83,7 @@ const PioneerJournalism = props => (
   <StyledSection>
     <StyledContainer>
       <img src={confettiImage} alt="Bleistift" />
-      <PioneerHeadline color="black">Mission</PioneerHeadline>
-
-      {/* <span>
-        <PioneerLogo width="100px"></PioneerLogo> Mission
-      </span> */}
+      <PioneerHeadline color="#1f1f1f">Mission</PioneerHeadline>
       <h2>
         Celebrate the <wbr />
         opinion of others!

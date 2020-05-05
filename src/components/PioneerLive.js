@@ -18,7 +18,6 @@ const StyledSection = styled.section`
   }
 
   & > p {
-    color: #000;
     text-align: center;
     margin: 0 auto 40px auto;
     max-width: 500px;
