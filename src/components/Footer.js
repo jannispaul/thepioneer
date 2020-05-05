@@ -62,7 +62,7 @@ const StyledIcon = styled.div`
     width: 24px;
     fill: #fff;
     :hover {
-      fill: #ff0045;
+      fill: #a3065e;
     }
   }
 `

@@ -30,7 +30,7 @@ const StyledHalf = styled.div`
     max-width: 40px;
   }
   @media ${device.tablet} {
-    padding: 80px 32px 200px;
+    padding: 80px 32px 240px;
     & > div {
       max-width: 500px;
     }
@@ -69,7 +69,7 @@ const StyledButtonContainer = styled.div`
 
   @media ${device.tablet} {
     text-align: center;
-    margin-top: -120px;
+    margin-top: -150px;
   }
 `
 
