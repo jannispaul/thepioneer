@@ -17,6 +17,7 @@ const StyledSection = styled.section`
   background: #1f1f1f;
   width: 100%;
   padding: 50px 0 80px 0;
+  overflow: hidden;
 
   @media ${device.tablet} {
     padding: 80px 0 100px 0;

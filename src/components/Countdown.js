@@ -15,7 +15,6 @@ const StyledSection = styled.section`
   color: white;
   background: rgb(2, 0, 36);
   background-image: linear-gradient(90deg, #6622c3 0%, #a3065e 99%);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   flex-direction: column;
   @media ${device.tablet} {
   }
@@ -27,7 +26,7 @@ const StyledGrid = styled.div`
   width: 100%;
   margin-bottom: 20px;
   @media ${device.tablet} {
-    max-width: 400px;
+    max-width: 380px;
   }
 `
 const TimerCard = styled.div`
@@ -37,7 +36,7 @@ const TimerCard = styled.div`
   text-align: center;
   color: #1f1f1f;
   background: white;
-  width: 30%;
+  width: 25%;
   background: #ffffff;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
   border-radius: 1.43px;

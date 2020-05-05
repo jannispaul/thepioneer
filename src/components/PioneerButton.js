@@ -42,6 +42,9 @@ const StyledButton = styled.a`
     max-width: ${props => (props.width ? props.width : "120px")};
     height: auto;
   }
+  :hover {
+    background: #6623c2;
+  }
   @media ${device.tablet} {
     padding: 10px 18px;
     font-size: 24px;
@@ -63,7 +66,7 @@ const StyledIcon = styled.div`
   display: inline-block;
 
   & > svg {
-    fill: #fff;
+    fill: ${props => (props.color ? props.color : "#fff")};
     height: 12px;
     width: 12px;
     margin-left: 4px;
@@ -101,7 +104,7 @@ function PioneerButton(props) {
           fill={props.fill ? props.fill : "#fff"}
           width={props.width}
         />
-        <StyledIcon>
+        <StyledIcon color={props.color}>
           <Icon icon={ICONS.CHEVRON} />
         </StyledIcon>
       </StyledButton>
