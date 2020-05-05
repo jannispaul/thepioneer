@@ -59,6 +59,14 @@ const StyledContainer = styled.div`
   }
 `
 
+const StyledButtonContainer = styled.div`
+  max-width: calc(100vw - 32px);
+  margin: auto;
+  @media ${device.tablet} {
+    text-align: center;
+  }
+`
+
 const PioneerJournalism = props => (
   <StyledSection>
     <StyledContainer>
@@ -80,7 +88,9 @@ const PioneerJournalism = props => (
           ></SingleBlogPost>
         )
       })} */}
-      <PioneerButton subline></PioneerButton>
+      <StyledButtonContainer>
+        <PioneerButton subline></PioneerButton>
+      </StyledButtonContainer>
     </StyledContainer>
   </StyledSection>
 )

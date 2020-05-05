@@ -12,10 +12,11 @@ const StyledContainer = styled.div`
   & > small {
     margin-top: 10px;
     display: block;
+    font-weight: 600;
   }
   @media ${device.tablet} {
     & > small {
-      margin-top: 18px;
+      margin-top: 14px;
     }
   }
 `

@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 import Slider from "../components/Slider"
-import PioneerLogo from "../components/PioneerLogo"
+import PioneerHeadline from "./PioneerHeadline"
+
 import WallStreetWeeklyImage from "../components/ImageComponents/Originals/WallStreetWeeklyImage"
 import UeberstundeImage from "../components/ImageComponents/Originals/UeberstundeImage"
 import BeyondTheObviousImage from "../components/ImageComponents/Originals/BeyondTheObviousImage"
@@ -62,9 +63,13 @@ const StyledH2 = styled.h2`
 
 const PioneerOriginals = () => (
   <StyledSection>
-    <StyledH2>
+    <PioneerHeadline color="#fff" large center>
+      Originals
+    </PioneerHeadline>
+
+    {/* <StyledH2>
       <PioneerLogo fill="#fff" width="140px"></PioneerLogo> Origingals
-    </StyledH2>
+    </StyledH2> */}
     <Slider>
       <a
         href="https://wall-street-weekly.com/"

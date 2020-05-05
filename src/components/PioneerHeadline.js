@@ -9,27 +9,27 @@ const StyledHeadline = styled.span`
   font-size: 24px;
   font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
     sans-serif;
-  background: none;
-  -webkit-text-fill-color: #000;
   font-weight: 300;
-  color: ${props => (props.color ? props.color : "#000")};
-  margin-bottom: 16px;
+  margin-bottom: ${props => (props.large ? "32px" : "16px")};
+  text-align: ${props => (props.center ? "center" : "left")};
+  color: ${props => (props.color ? props.color : "#1f1f1f")};
+  transform: ${props => (props.large ? "scale(1.5)" : "scale(1)")};
+  transform-origin: 50% 50%;
 
   @media ${device.tablet} {
-    margin-bottom: 24px;
+    transform: ${props => (props.large ? "scale(1.7)" : "scale(1)")};
+    margin-bottom: ${props => (props.large ? "64px" : "24px")};
   }
 
   & svg {
     fill: currentColor;
     max-width: 140px;
     height: auto;
-    @media ${device.tablet} {
-    }
   }
 `
 
 const PioneerHeadline = props => (
-  <StyledHeadline color={props.color}>
+  <StyledHeadline color={props.color} large={props.large} center={props.center}>
     <PioneerLogo fill={props.color}></PioneerLogo> {props.children}
   </StyledHeadline>
 )
