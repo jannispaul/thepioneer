@@ -163,7 +163,7 @@ a {
   }
 }
 /* Laptop */
-@media (min-width: 1024px) {
+@media (min-width: 1168px) {
   p {
     font-size: 19px;
   }
