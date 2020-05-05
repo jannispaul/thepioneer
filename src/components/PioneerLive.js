@@ -41,6 +41,16 @@ const StyledButtonContainer = styled.div`
 `
 const StyledIframe = styled.iframe`
   margin: 0 auto 40px;
+  width: 100%;
+  height: calc(56vw - 32px);
+  @media ${device.tablet} {
+    width: 560px;
+    height: 315px;
+  }
+  @media ${device.laptop} {
+    width: 840px;
+    height: 473px;
+  }
 `
 const PioneerLive = () => (
   <StyledSection>

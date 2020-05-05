@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 import "../theme/font-face.css"
 import "../theme/styles.css"
@@ -7,6 +8,10 @@ import "../theme/styles.css"
 import Navigation from "./Navigation"
 import Footer from "./Footer"
 import CookieNotice from "../components/CookieNotice"
+
+const StyledMain = styled.div`
+  overflow: hidden;
+`
 
 const Layout = props => {
   // const data = useStaticQuery(graphql`
@@ -22,9 +27,8 @@ const Layout = props => {
   return (
     <div>
       <CookieNotice></CookieNotice>
-
       <Navigation></Navigation>
-      <main>{props.children}</main>
+      <StyledMain>{props.children}</StyledMain>
       <Footer></Footer>
     </div>
   )

@@ -3,12 +3,15 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { device } from "../../theme/breakpoints"
+import cursor from "../../images/pngs/cursor.png"
 
 const StyledImage = styled(Img)`
-  width: 180%;
+  width: 230%;
   cursor: grab;
-
+  cursor: ew-resize;
+  /* cursor: url(${cursor}), grab; */
   @media ${device.laptop} {
+    width: 180%;
   }
 `
 

@@ -13,7 +13,7 @@ const StyledHeadline = styled.span`
   margin-bottom: ${props => (props.large ? "32px" : "16px")};
   text-align: ${props => (props.center ? "center" : "left")};
   color: ${props => (props.color ? props.color : "#1f1f1f")};
-  transform: ${props => (props.large ? "scale(1.5)" : "scale(1)")};
+  transform: ${props => (props.large ? "scale(1.1)" : "scale(1)")};
   transform-origin: 50% 50%;
 
   @media ${device.tablet} {

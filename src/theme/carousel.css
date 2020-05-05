@@ -193,12 +193,14 @@
 }
 
 .BrainhubCarouselItem--active {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease;
+  /* transition-delay: 0.1s; */
   transform: scale(1.1);
 }
 .BrainhubCarouselItem:not(.BrainhubCarouselItem--active) {
   transition: all 0.2s ease-in-out;
   transform: scale(1);
+  /* transition-delay: 0.1s; */
 }
 .BrainhubCarouselItem:hover {
   transition: all 0.2s ease-in-out;
