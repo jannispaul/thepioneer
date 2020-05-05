@@ -14,6 +14,7 @@ const SimpleSlider = class extends React.Component {
           infinite
           dots
           draggable
+          // value={0}
           slidesPerPage={4}
           breakpoints={{
             1300: { slidesPerPage: 3 },

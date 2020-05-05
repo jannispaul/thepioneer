@@ -16,21 +16,7 @@ import DerAchteTagImage from "../components/ImageComponents/Originals/DerAchteTa
 const StyledSection = styled.section`
   background: #1f1f1f;
   width: 100%;
-  /* padding-bottom: 100px; */
   padding: 50px 0 80px 0;
-  & > h2 {
-    display: block;
-    text-align: center;
-    margin: auto;
-    padding: 0 16px;
-    margin-bottom: 32px;
-    color: #fff;
-    font-size: 24px;
-    font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont,
-      Arial, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
 
   @media ${device.tablet} {
     padding: 80px 0 100px 0;
@@ -49,27 +35,12 @@ const StyledSection = styled.section`
     }
   }
 `
-const StyledH2 = styled.h2`
-  padding: 0 16px;
-  color: #fff;
-  font-size: 24px;
-  font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, Arial,
-    sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background: none;
-  -webkit-text-fill-color: #fff;
-`
 
 const PioneerOriginals = () => (
   <StyledSection>
     <PioneerHeadline color="#fff" large center>
       Originals
     </PioneerHeadline>
-
-    {/* <StyledH2>
-      <PioneerLogo fill="#fff" width="140px"></PioneerLogo> Origingals
-    </StyledH2> */}
     <Slider>
       <a
         href="https://wall-street-weekly.com/"
