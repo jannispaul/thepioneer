@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { device } from "../../theme/breakpoints"
 
 const StyledImage = styled(Img)`
-  width: 200%;
+  width: 180%;
   cursor: grab;
 
   @media ${device.laptop} {
@@ -20,7 +20,7 @@ const PioneerOneGraphic = () => (
           relativePath: { eq: "pioneerone-graphic.jpg" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 4000, quality: 70) {
+            fluid(maxWidth: 4700, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }

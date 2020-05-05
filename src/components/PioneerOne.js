@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 import PioneerHeadline from "./PioneerHeadline"
-import ScrollContainer from "react-indiana-drag-scroll"
-import PioneerOneGraphic from "../components/ImageComponents/PioneerOneGraphic"
+import DragShip from "./DragShip"
 import PioneerButton from "./PioneerButton"
 import flagImage from "../images/pngs/fahne.png"
 
@@ -71,9 +70,7 @@ const PioneerOne = () => (
       </p>
       <PioneerButton subline></PioneerButton>
     </ContentContainer>
-    <ScrollContainer>
-      <PioneerOneGraphic></PioneerOneGraphic>
-    </ScrollContainer>
+    <DragShip></DragShip>
   </StyledSection>
 )
 
