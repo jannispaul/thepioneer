@@ -38,7 +38,7 @@ const CookieNotice = () => (
     >
       Diese Website nutzt Cookies um Ihr Erlebnis zu verbessern.{" "}
       <a
-        href="https://mediapioneer.com/datenschutz"
+        href="https://www.thepioneer.de/s/datenschutz"
         style={{ color: "#1f1f1f" }}
         aria-label="Link zum Datenschutz"
       >

@@ -116,7 +116,7 @@ function SEO({
 SEO.defaultProps = {
   lang: `de`,
   meta: [],
-  keywords: ["podcast", "america", "interview", "media pioneer", "steingart"],
+  keywords: [],
   index: `index`,
 }
 
