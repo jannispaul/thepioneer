@@ -17,7 +17,7 @@ const StyledSection = styled.section`
       text-align: center;
       max-width: 600px;
       padding: 0 16px;
-      margin: 0 auto 30px;
+      margin: -20px auto 30px;
     }
   }
   @media ${device.tablet} {
