@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `title`,
-    description: `description`,
-    author: `author`,
+    title: `Join ThePioneer`,
+    description: `Gabor Steingart und Crew präsentieren ThePioneer. Gemeinsam können wir den Journalismus neu beleben.`,
+    author: `Gabor Steingart, Michael Bröcker, Gordon Repinski`,
     siteUrl: `https://join.thepioneer.com`,
-    keywords: `Media Pioneer, Podcast, Überstunde, Michael Bröcker, Marina Weisband, Feierabend-Talk, Berlin`,
+    keywords: `Journalismus, Morning Briefing, Redaktionsschiff, Pioneer One`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

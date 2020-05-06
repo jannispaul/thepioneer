@@ -117,7 +117,7 @@ const PioneerJournalism = props => (
           </li>
           <li>
             Publikation eigener Inhalte als verifizierter{" "}
-            <PioneerLogo width="100px"></PioneerLogo> Author
+            <PioneerLogo width="100px"></PioneerLogo> Expert
           </li>
           <li>Unterstützung neuer journalistischer Projekte</li>
         </ul>

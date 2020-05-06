@@ -81,7 +81,7 @@ const Footer = props => (
     <div>
       <LegalLinks>
         <a
-          href="https://mediapioneer.com/impressum/"
+          href="https://www.thepioneer.de/s/impressum"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Link zum Impressum"
@@ -89,7 +89,7 @@ const Footer = props => (
           Impressum
         </a>
         <a
-          href="https://mediapioneer.com/datenschutz/"
+          href="https://www.thepioneer.de/s/datenschutz"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Link zum Datenschutz"

@@ -44,47 +44,59 @@ const PioneerOriginals = () => (
     </PioneerHeadline>
     <Slider>
       <a
-        href="https://wall-street-weekly.com/"
+        href="https://www.thepioneer.de/originals/wall-street-weekly"
         target="_blank"
         rel="noopener noreferrer"
       >
         <WallStreetWeeklyImage></WallStreetWeeklyImage>
       </a>
       <a
-        href="https://ueberstunde.com/"
+        href="https://www.thepioneer.de/originals/die-ueberstunde"
         target="_blank"
         rel="noopener noreferrer"
       >
         <UeberstundeImage></UeberstundeImage>
       </a>
       <a
-        href="https://think-beyondtheobvious.com/"
+        href="https://www.thepioneer.de/originals/beyond-the-obvious"
         target="_blank"
         rel="noopener noreferrer"
       >
         <BeyondTheObviousImage></BeyondTheObviousImage>
       </a>
       <a
-        href="http://the-americans.com/"
+        href="https://www.thepioneer.de/originals/the-americans"
         target="_blank"
         rel="noopener noreferrer"
       >
         <TheAmericansImage></TheAmericansImage>
       </a>
       <a
-        href="https://www.gaborsteingart.com/morning-briefing/"
+        href="https://www.thepioneer.de/originals/morning-briefing"
         target="_blank"
         rel="noopener noreferrer"
       >
         <MorningBriefingImage></MorningBriefingImage>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.thepioneer.de/originals/der-achte-tag"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <DerAchteTagImage></DerAchteTagImage>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.thepioneer.de/originals/hauptstadt-briefing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <HauptstadtBriefingImage></HauptstadtBriefingImage>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.thepioneer.de/originals/tech-briefing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <TechBriefingImage></TechBriefingImage>
       </a>
     </Slider>
