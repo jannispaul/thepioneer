@@ -24,6 +24,7 @@ class PioneerLogo extends React.Component {
         maxWidth={this.props.width}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 282 38"
+        alt="ThePioneer Logo"
       >
         <defs>
           <linearGradient x1="0%" y1="50.001%" x2="100%" y2="50.001%" id="a">

@@ -106,7 +106,7 @@ const Footer = props => (
           aria-label="The Pioneer auf Instagram"
         >
           <StyledIcon>
-            <Icon icon={ICONS.INSTAGRAM} />
+            <Icon icon={ICONS.INSTAGRAM} alt="Instagram Logo" />
           </StyledIcon>
         </a>
         {/* <a
@@ -116,7 +116,7 @@ const Footer = props => (
           aria-label="The Pioneer auf twitter"
         >
           <StyledIcon>
-            <Icon icon={ICONS.TWITTER} />
+            <Icon icon={ICONS.TWITTER} alt="Twitter Logo"/>
           </StyledIcon>
         </a> */}
         <a
@@ -126,7 +126,7 @@ const Footer = props => (
           aria-label="The Pioneer auf Facebook"
         >
           <StyledIcon>
-            <Icon icon={ICONS.FACEBOOK} />
+            <Icon icon={ICONS.FACEBOOK} alt="Facebook Logo" />
           </StyledIcon>
         </a>
         <a
@@ -136,7 +136,7 @@ const Footer = props => (
           aria-label="The Pioneer auf LinkedIn"
         >
           <StyledIcon>
-            <Icon icon={ICONS.LINKEDIN} />
+            <Icon icon={ICONS.LINKEDIN} alt="LinkedIn Logo" />
           </StyledIcon>
         </a>
       </SocialLinks>

@@ -31,7 +31,7 @@ export default () => (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
-          alt=""
+          alt="Schriftzug 'Der Achte Tag' vor dem Brandenburger Tor bei Nacht."
         />
       )
     }}

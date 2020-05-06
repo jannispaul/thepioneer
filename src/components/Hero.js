@@ -78,7 +78,7 @@ const HeroVideo = () => (
           // poster={hero}
         >
           <source src={heroVideo} />
-          <source src={heroVideoWEBM} />
+          {/* <source src={heroVideoWEBM} /> */}
         </video>
         <HeroPlaceHolderImage></HeroPlaceHolderImage>
       </VideoContainer>

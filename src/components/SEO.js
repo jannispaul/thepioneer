@@ -116,7 +116,12 @@ function SEO({
 SEO.defaultProps = {
   lang: `de`,
   meta: [],
-  keywords: [],
+  keywords: [
+    "Journalismus",
+    "Morning Briefing",
+    "Redaktionsschiff",
+    "Pioneer One",
+  ],
   index: `index`,
 }
 

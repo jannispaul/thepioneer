@@ -31,7 +31,7 @@ export default () => (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
-          alt=""
+          alt="Zwei Männer in Portrait vor einem abstrakten, technisch wirkenden Hintergrund"
         />
       )
     }}

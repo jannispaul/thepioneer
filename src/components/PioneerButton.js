@@ -105,7 +105,7 @@ function PioneerButton(props) {
           width={props.width}
         />
         <StyledIcon color={props.color}>
-          <Icon icon={ICONS.CHEVRON} />
+          <Icon icon={ICONS.CHEVRON} alt="Pfeil nach rechts" />
         </StyledIcon>
       </StyledButton>
       {props.subline ? <small>Wähle selbst, wie viel du beiträgst.</small> : ""}

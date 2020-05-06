@@ -31,7 +31,7 @@ export default () => (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
-          alt=""
+          alt="Schriftzug 'Hauptstadt Briefing' auf eine Akte mit Bundesadler-Stempel"
         />
       )
     }}
