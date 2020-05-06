@@ -126,7 +126,7 @@ const Countdown = () => {
         :
         <TimerCard>
           {timeLeft.sekunden}
-          <span>Sec</span>
+          <span>Sek</span>
         </TimerCard>
       </StyledGrid>
       <Text>

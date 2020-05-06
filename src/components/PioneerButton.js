@@ -34,6 +34,8 @@ const StyledButton = styled.a`
   font-weight: 600;
   color: ${props => (props.color ? props.color : "#fff")};
   background: ${props => (props.background ? props.background : "#1f1f1f")};
+  transition: background 0.2s ease;
+
   span {
     white-space: pre;
   }
@@ -43,6 +45,7 @@ const StyledButton = styled.a`
     height: auto;
   }
   :hover {
+    transition: background 0.2s ease;
     background: #6623c2;
   }
   @media ${device.tablet} {
