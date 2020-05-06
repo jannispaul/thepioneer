@@ -93,7 +93,7 @@ function PioneerButton(props) {
   return (
     <StyledContainer small={props.small}>
       <StyledButton
-        href="#"
+        href="https://www.thepioneer.de/originals/others/articles/join-thepioneer"
         width={props.width}
         fontSize={props.fontSize}
         background={props.background}
