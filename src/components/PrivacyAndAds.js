@@ -93,30 +93,27 @@ const PrivacyAndAds = () => (
   <StyledSection>
     <StyledHalf>
       <div>
-        <img src={lock} alt="" /> <StyledHeadline>Privacy</StyledHeadline>
+        <img src={lock} alt="Sicherheitsschloss Icon" />{" "}
+        <StyledHeadline>Privacy</StyledHeadline>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-          venenatis vitae, justo. Nullam dict
+          Wir schreiben Datenschutz groß und deshalb erheben wir auf{" "}
+          <a href="https://thepioneer.de">ThePioneer.de</a> lediglich dann
+          Daten, wenn sie dazu beitragen die Webseite nutzerfreundlicher,
+          effektiver und sicherer zu machen. Seien Sie sich gewiss, dass wir
+          Ihre Daten niemals an Dritte verkaufen.
         </p>
       </div>
     </StyledHalf>
     <StyledOtherHalf>
       <div>
-        <img src={noAds} alt="" />
+        <img src={noAds} alt="Durchgestrichene Werbung Icon" />
         <StyledHeadline>Werbefreiheit</StyledHeadline>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-          venenatis vitae, justo. Nullam dict
+          Der Kern vom Kern unserer journalistischen Arbeit ist die
+          Unabhängigkeit, insbesondere die von politischen Parteien, Verbänden
+          und Werbeindustrie. Darum wollen wir ein Geschäftsmodell etablieren,
+          das auf Werbeerlöse verzichtet – denn wirtschaftliche Abhängigkeiten
+          sind mit dem Ziel strikter Unabhängigkeit nicht vereinbar.
         </p>
       </div>
     </StyledOtherHalf>
