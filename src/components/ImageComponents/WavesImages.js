@@ -13,10 +13,14 @@ const StyledContainer = styled.div`
 
   div:first-of-type {
     background: url(${wave1}) repeat-x;
+    background-size: contain;
+
     animation: waves 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   }
   div:last-of-type {
     background: url(${wave2}) repeat-x;
+    background-size: contain;
+
     animation: waves 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   }
   div {

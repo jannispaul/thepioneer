@@ -44,6 +44,13 @@ const PioneerOriginals = () => (
     </PioneerHeadline>
     <Slider>
       <a
+        href="https://www.thepioneer.de/originals/morning-briefing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MorningBriefingImage></MorningBriefingImage>
+      </a>
+      <a
         href="https://www.thepioneer.de/originals/wall-street-weekly"
         target="_blank"
         rel="noopener noreferrer"
@@ -70,13 +77,6 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <TheAmericansImage></TheAmericansImage>
-      </a>
-      <a
-        href="https://www.thepioneer.de/originals/morning-briefing"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <MorningBriefingImage></MorningBriefingImage>
       </a>
       <a
         href="https://www.thepioneer.de/originals/der-achte-tag"

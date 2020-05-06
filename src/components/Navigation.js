@@ -12,6 +12,7 @@ const StyledNav = styled.nav`
   z-index: 100;
   background: #fff;
   height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
   & > div {
     width: 100%;
     display: flex;

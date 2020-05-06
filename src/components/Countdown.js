@@ -6,7 +6,6 @@ import PioneerLogo from "./PioneerLogo"
 
 const StyledSection = styled.section`
   position: relative;
-  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -25,22 +24,23 @@ const StyledGrid = styled.div`
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
+  max-width: 420px;
   @media ${device.tablet} {
-    max-width: 380px;
   }
 `
 const TimerCard = styled.div`
-  font-size: 60px;
+  font-size: 45px;
   line-height: 1;
   padding: 12px 0 12px 0;
   text-align: center;
   color: #1f1f1f;
   background: white;
-  width: 25%;
+  width: 20%;
   background: #ffffff;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
   border-radius: 1.43px;
   @media ${device.tablet} {
+    font-size: 60px;
   }
 
   & > span {
@@ -80,7 +80,7 @@ const Countdown = () => {
         tage: Math.floor(difference / (1000 * 60 * 60 * 24)),
         stunden: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minuten: Math.floor((difference / 1000 / 60) % 60),
-        // Sekunden: Math.floor((difference / 1000) % 60),
+        sekunden: Math.floor((difference / 1000) % 60),
       }
     }
 
@@ -122,6 +122,11 @@ const Countdown = () => {
         <TimerCard>
           {timeLeft.minuten}
           <span>Min</span>
+        </TimerCard>
+        :
+        <TimerCard>
+          {timeLeft.sekunden}
+          <span>Sec</span>
         </TimerCard>
       </StyledGrid>
       <Text>

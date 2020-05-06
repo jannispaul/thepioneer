@@ -21,7 +21,7 @@ const CookieNotice = () => (
         position: "relative",
         background: "#f3eefb",
         color: "#1f1f1f",
-        boxShadow: "0 0 10px rgba(0,0,0,0.5)",
+        boxShadow: "0 0 10px rgba(0,0,0,0.2)",
         zIndex: "200",
         display: "flex",
       }}

@@ -100,30 +100,40 @@ const Footer = props => (
 
       <SocialLinks>
         <a
-          href="https://www.instagram.com/media.pioneer/"
+          href="https://www.instagram.com/thepioneer.one/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Media Pioneer on instagram"
+          aria-label="The Pioneer auf Instagram"
         >
           <StyledIcon>
             <Icon icon={ICONS.INSTAGRAM} />
           </StyledIcon>
         </a>
-        <a
-          href="https://twitter.com/mediapioneercom"
+        {/* <a
+          href="https://twitter.com/ThePioneerDE"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Media Pioneer on twitter"
+          aria-label="The Pioneer auf twitter"
         >
           <StyledIcon>
             <Icon icon={ICONS.TWITTER} />
           </StyledIcon>
-        </a>
+        </a> */}
         <a
-          href="https://www.linkedin.com/company/media-pioneer"
+          href="https://www.facebook.com/ThePioneerOne"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Media Pioneer on linkedIn"
+          aria-label="The Pioneer auf Facebook"
+        >
+          <StyledIcon>
+            <Icon icon={ICONS.FACEBOOK} />
+          </StyledIcon>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/thepioneer/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="The Pioneer auf LinkedIn"
         >
           <StyledIcon>
             <Icon icon={ICONS.LINKEDIN} />

@@ -75,7 +75,7 @@ const HeroVideo = () => (
           playsInline
           autoPlay
           disableremoteplayback="true"
-          poster={hero}
+          // poster={hero}
         >
           <source src={heroVideo} />
           <source src={heroVideoWEBM} />
