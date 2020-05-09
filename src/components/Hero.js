@@ -5,8 +5,8 @@ import HeroShipImage from "./ImageComponents/HeroShipImage"
 import PioneerButton from "./PioneerButton"
 import { device } from "../theme/breakpoints"
 import heroVideo from "../images/hero.mp4"
-import heroVideoWEBM from "../images/hero.webm"
-import hero from "../images/hero.png"
+// import heroVideoWEBM from "../images/hero.webm"
+// import hero from "../images/hero.png"
 import Waves from "./ImageComponents/WavesImages"
 
 const StyledSection = styled.section`
