@@ -70,7 +70,7 @@ const PioneerLive = () => (
       <StyledIframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/arynwvLg6Y8"
+        src="https://www.youtube.com/watch?v=WWG8mTglW8k"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
