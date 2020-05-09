@@ -72,18 +72,25 @@ const Text = styled.p`
 `
 const CountdownOverContainer = styled.div`
   padding: 30px 0;
+  text-align: center;
   p {
-    color: #fff;
-    -webkit-text-fill-color: #fff;
+    font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont,
+      Arial, sans-serif;
+    font-weight: 600;
+    margin: 0 0 24px 0;
     font-size: 24px;
-    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.4;
   }
   span {
     font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont,
       Arial, sans-serif;
     font-weight: 300;
   }
-  text-align: center;
+  a {
+    font-size: 21px;
+  }
 `
 
 const Countdown = () => {
