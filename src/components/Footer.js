@@ -146,7 +146,7 @@ const Footer = props => (
         rel="noopener noreferrer"
         aria-label="Link zur PixelPink-Website"
       >
-        Website: PixelPink
+        Design und Entwicklung: PixelPink
       </Backlink>
     </div>
   </StyledFooter>

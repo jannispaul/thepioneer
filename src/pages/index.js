@@ -5,7 +5,7 @@ import Hero from "../components/Hero"
 import Countdown from "../components/Countdown"
 import PioneerJournalism from "../components/PioneerJournalism"
 import PioneerMission from "../components/PioneerMission"
-import PioneerContent from "../components/PioneerContent"
+// import PioneerContent from "../components/PioneerContent"
 import PioneerOriginals from "../components/PioneerOriginals"
 import PioneerLive from "../components/PioneerLive"
 import PioneerOne from "../components/PioneerOne"
@@ -19,7 +19,7 @@ const IndexPage = () => (
     <PioneerMission></PioneerMission>
     <Countdown></Countdown>
     <PioneerJournalism></PioneerJournalism>
-    <PioneerContent></PioneerContent>
+    {/* <PioneerContent></PioneerContent> */}
     <PioneerOriginals></PioneerOriginals>
     <PioneerOneImage></PioneerOneImage>
     <PioneerOne></PioneerOne>
