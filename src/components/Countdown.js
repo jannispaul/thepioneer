@@ -23,8 +23,8 @@ const StyledGrid = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
   max-width: 420px;
+  margin: 0 auto 30px auto;
   @media ${device.tablet} {
   }
 `
@@ -70,9 +70,26 @@ const Text = styled.p`
     font-size: 22px;
   }
 `
+const CountdownOverContainer = styled.div`
+  padding: 30px 0;
+  p {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  span {
+    font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont,
+      Arial, sans-serif;
+    font-weight: 300;
+  }
+  text-align: center;
+`
+
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date("2020-05-18") - +new Date()
+    const difference =
+      +new Date("2020-05-16") - +new Date() + 1000 * 60 * 60 * 14
     let timeLeft = {}
 
     if (difference > 0) {
@@ -82,6 +99,7 @@ const Countdown = () => {
         minuten: Math.floor((difference / 1000 / 60) % 60),
         sekunden: Math.floor((difference / 1000) % 60),
       }
+    } else {
     }
 
     return timeLeft
@@ -107,33 +125,53 @@ const Countdown = () => {
 
   return (
     <StyledSection>
-      {/* {timerComponents.length ? timerComponents : <span>Es ist soweit!</span>} */}
-      <StyledGrid>
-        <TimerCard>
-          {timeLeft.tage}
-          <span>Tage</span>
-        </TimerCard>
-        :
-        <TimerCard>
-          {timeLeft.stunden}
-          <span>Std</span>
-        </TimerCard>
-        :
-        <TimerCard>
-          {timeLeft.minuten}
-          <span>Min</span>
-        </TimerCard>
-        :
-        <TimerCard>
-          {timeLeft.sekunden}
-          <span>Sek</span>
-        </TimerCard>
-      </StyledGrid>
-      <Text>
-        bis zur Ankunft von{" "}
-        <PioneerLogo fill="#fff" width="120px"></PioneerLogo> <span>One</span>{" "}
-        in Berlin
-      </Text>
+      {timerComponents.length ? (
+        ""
+      ) : (
+        <CountdownOverContainer>
+          <p>
+            <PioneerLogo fill="#fff" width="130px"></PioneerLogo>{" "}
+            <span>One</span> hat die Berliner Wasserstraßen erreicht
+          </p>
+          <span>
+            <a href="https://www.thepioneer.de/redaktionsschiff">
+              GPS Live-Tracking
+            </a>
+          </span>
+        </CountdownOverContainer>
+      )}
+      {timerComponents.length ? (
+        <div>
+          <StyledGrid>
+            <TimerCard>
+              {timeLeft.tage}
+              <span>Tage</span>
+            </TimerCard>
+            :
+            <TimerCard>
+              {timeLeft.stunden}
+              <span>Std</span>
+            </TimerCard>
+            :
+            <TimerCard>
+              {timeLeft.minuten}
+              <span>Min</span>
+            </TimerCard>
+            :
+            <TimerCard>
+              {timeLeft.sekunden}
+              <span>Sek</span>
+            </TimerCard>
+          </StyledGrid>
+          <Text>
+            bis zur Ankunft von{" "}
+            <PioneerLogo fill="#fff" width="120px"></PioneerLogo>{" "}
+            <span>One</span> in Berlin
+          </Text>
+        </div>
+      ) : (
+        ""
+      )}
     </StyledSection>
   )
 }
