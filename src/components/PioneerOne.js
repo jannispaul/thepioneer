@@ -69,8 +69,8 @@ const PioneerOne = () => (
       <p>
         Herzlich Willkommen auf ThePioneer One. An Bord des ersten
         Redaktionsschiffs der Welt begeben wir uns auf eine Expedition in die
-        Erkenntnis und suchen gemeinsam nach unbequemen Wahrheiten. Bei mehreren
-        Live-Events pro Woche diskutieren wir gemeinsam mit Ihnen – und
+        Erkenntnis und suchen gemeinsam nach unbequemen Wahrheiten. Nach den
+        Corona-Einschränkungen diskutieren wir gemeinsam mit Ihnen – und
         verwandeln den schwimmenden Newsroom so zum demokratischsten Ort des
         Landes.
       </p>
