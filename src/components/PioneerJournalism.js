@@ -103,7 +103,7 @@ const PioneerJournalism = props => (
       <StyledContainer>
         <img src={micImage} alt="Airplanes flying away from headline" />
         <PioneerHeadline>Journalismus</PioneerHeadline>
-        <h2>Seperating News From Noise</h2>
+        <h2>Separating News From Noise</h2>
         <p>
           Werde Teil unseres internationalen Teams aus leidenschaftlichen
           Journalisten und Experten und unterstütze eine neue Form des
