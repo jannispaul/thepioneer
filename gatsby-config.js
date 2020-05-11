@@ -3,7 +3,7 @@ module.exports = {
     title: `Join ThePioneer`,
     description: `Gabor Steingart und Crew präsentieren ThePioneer. Gemeinsam können wir den Journalismus neu beleben.`,
     author: `Gabor Steingart, Michael Bröcker, Gordon Repinski`,
-    siteUrl: `https://join.thepioneer.com`,
+    siteUrl: `https://join.thepioneer.de`,
     keywords: `Journalismus, Morning Briefing, Redaktionsschiff, Pioneer One`,
   },
   plugins: [
