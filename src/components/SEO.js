@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import defaultOpenGraphImage from "../content/images/social-image.jpg"
+import defaultOpenGraphImage from "../images/social-image.jpg"
 
 function SEO({
   description,
@@ -39,9 +39,9 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description
 
-  // const ogImageUrl = ogimage || defaultOpenGraphImage
-  const ogImageUrl =
-    site.siteMetadata.siteUrl + (ogimage || defaultOpenGraphImage)
+  const ogImageUrl = ogimage || defaultOpenGraphImage
+  // const ogImageUrl =
+  //   site.siteMetadata.siteUrl + (ogimage || defaultOpenGraphImage)
 
   return (
     <Helmet

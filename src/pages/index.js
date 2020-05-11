@@ -14,7 +14,7 @@ import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="ThePioneer" />
+    <SEO title="Join ThePioneer" />
     <Hero></Hero>
     <PioneerMission></PioneerMission>
     <Countdown></Countdown>
