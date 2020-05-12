@@ -1,8 +1,0 @@
-# Redirect domain aliases to primary domain
-# https://ueberstunde.com* https://ueberstunde.com/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
-https://thepioneer.netlify.app* https://join.thepioneer.de/:splat 301!
-
-
-

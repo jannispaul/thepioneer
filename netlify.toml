@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "https://thepioneer.netlify.app"
+  to = " https://join.thepioneer.de/:splat"
+  status = 301 
+
+
+
+
+
+
