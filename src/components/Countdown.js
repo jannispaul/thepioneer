@@ -96,7 +96,7 @@ const CountdownOverContainer = styled.div`
 const Countdown = () => {
   const calculateTimeLeft = () => {
     const difference =
-      +new Date("2020-05-16") - +new Date() + 1000 * 60 * 60 * 14
+      +new Date("2020-05-16") - +new Date() + 1000 * 60 * 60 * 12
     let timeLeft = {}
 
     if (difference > 0) {
