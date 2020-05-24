@@ -86,7 +86,7 @@ const PioneerOriginals = () => (
         <DerAchteTagImage></DerAchteTagImage>
       </a>
       <a
-        href="https://www.thepioneer.de/originals/hauptstadt-briefing"
+        href="https://www.thepioneer.de/originals/hauptstadt-das-briefing"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -17,7 +17,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "originals/hauptstadt-briefing.jpg" }) {
+        file(relativePath: { eq: "originals/hauptstadt-das-briefing.jpg" }) {
           childImageSharp {
             fixed(width: 310) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
@@ -31,7 +31,7 @@ export default () => (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
-          alt="Schriftzug 'Hauptstadt Briefing' auf eine Akte mit Bundesadler-Stempel"
+          alt="Schriftzug 'Hauptstadt - Das Briefing' auf einer Akte mit Bundesadler-Stempel"
         />
       )
     }}
