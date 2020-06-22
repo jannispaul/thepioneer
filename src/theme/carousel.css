@@ -213,3 +213,6 @@
   overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map*/
+.BrainhubCarousel__dots button {
+  background: none !important;
+}
