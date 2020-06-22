@@ -19,15 +19,15 @@
     "gatsby-transformer-sharp": "^2.5.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
-    "react-cookie-consent": "^3.0.0",
+    "react-cookie-consent": "^5.1.1",
     "react-dom": "^16.13.0",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.1.0",
     "react-indiana-drag-scroll": "^1.6.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "npm-check": "^5.9.2",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.5"
   },
   "keywords": [
     "gatsby"
