@@ -15,14 +15,14 @@ const PioneerOneImage = () => (
       query {
         pioneerOneImage: file(relativePath: { eq: "pioneerone.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 4000, quality: 70) {
+            fluid(maxWidth: 2500, quality: 40) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const image = data.pioneerOneImage.childImageSharp
       return (
         <StyledImage
