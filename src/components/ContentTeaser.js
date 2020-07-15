@@ -1,49 +1,63 @@
-// import React from "react"
-// import { ApolloClient, InMemoryCache } from "@apollo/client"
-// import { gql } from "@apollo/client"
+import React from "react"
+import { useQuery, gql } from "@apollo/client"
 
-// // import { StaticQuery, graphql } from "gatsby"
-// // import SingleBlogPost from "../components/SingleBlogPost"
-// // import PioneerHeadline from "../components/PioneerHeadline"
+// import SingleBlogPost from "../components/SingleBlogPost"
+// import PioneerHeadline from "../components/PioneerHeadline"
 
-// // import styled from "styled-components"
-// // import { device } from "../theme/breakpoints"
+import styled from "styled-components"
+import { device } from "../theme/breakpoints"
 
-// // const StyledSection = styled.section`
-// //   background: white;
-// //   width: 100%;
-// //   display: flex;
-// //   flex-direction: column;
-// //   justify-content: center;
-// //   padding: 60px 0 80px 0;
+const StyledSection = styled.section`
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 0 80px 0;
 
-// //   @media ${device.tablet} {
-// //     padding: 80px 0 100px 0;
-// //   }
-// // `
+  @media ${device.tablet} {
+    padding: 80px 0 100px 0;
+  }
+`
 
-// // const StyledGrid = styled.div`
-// //   max-width: 1280px;
-// //   margin: auto;
-// //   /* @media ${device.tablet} {
-// //     display: grid;
-// //     grid-template-columns: repeat(3, 240px);
-// //   } */
-// //   @media ${device.laptop} {
-// //     display: grid;
-// //     grid-template-columns: repeat(3, 330px);
-// //   }
-// // `
+const StyledGrid = styled.div`
+  max-width: 1280px;
+  margin: auto;
+  /* @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+  } */
+  @media ${device.laptop} {
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+  }
+`
 
-// const client = new ApolloClient({
-//   uri: "https://48p1r2roz4.sse.codesandbox.io",
-//   cache: new InMemoryCache(),
-// })
+function ContentTeaser() {
+  const { loading, error, data } = useQuery(EXCHANGE_RATES)
 
-// const ContentTeaser = ({ data }) => {
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error :(</p>
+
+  return (
+    <StyledGrid>
+      {data.rates.map(({ currency, rate }) => (
+        <div key={currency}>
+          <p>
+            {currency}: {rate}
+          </p>
+        </div>
+      ))}
+    </StyledGrid>
+  )
+}
+
+export default ContentTeaser
+// export const ContentTeaser = ({ data }) => {
 //   return (
 //     <StyledSection>
 //       <PioneerHeadline>Blog</PioneerHeadline>
+//       <ApolloProvider client={client}></ApolloProvider>
 //       {/* <StyledGrid>
 //         {data.allWordpressPost.edges.map((post) => {
 //           return (
@@ -63,51 +77,12 @@
 //     </StyledSection>
 //   )
 // }
-// client
-//   .query({
-//     query: gql`
-//       query GetRates {
-//         rates(currency: "USD") {
-//           currency
-//         }
-//       }
-//     `,
-//   })
-//   .then((result) => console.log(result))
 
-// // export default props => (
-// //   <StaticQuery
-// //     query={graphql`
-// //       query {
-// //         allWordpressPost(
-// //           limit: 3
-// //           filter: {
-// //             categories: { elemMatch: { name: { eq: "Pressemitteilung" } } }
-// //           }
-// //         ) {
-// //           edges {
-// //             node {
-// //               id
-// //               title
-// //               date(locale: "de_DE", formatString: "D. MMMM YYYY")
-// //               link
-// //               featured_media {
-// //                 id
-// //                 localFile {
-// //                   childImageSharp {
-// //                     # Try editing the "width" and "height" values.
-// //                     resolutions(width: 300, height: 200) {
-// //                       ...GatsbyImageSharpResolutions_withWebp_tracedSVG
-// //                     }
-// //                   }
-// //                 }
-// //                 alt_text
-// //               }
-// //             }
-// //           }
-// //         }
-// //       }
-// //     `}
-// //     render={data => <ContentTeaser data={data} {...props} />}
-// //   />
-// // )
+const EXCHANGE_RATES = gql`
+  query GetExchangeRates {
+    rates(currency: "USD") {
+      currency
+      rate
+    }
+  }
+`

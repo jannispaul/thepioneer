@@ -6,6 +6,7 @@ import Countdown from "../components/Countdown"
 import PioneerJournalism from "../components/PioneerJournalism"
 import PioneerMission from "../components/PioneerMission"
 // import PioneerContent from "../components/PioneerContent"
+import ContentTeaser from "../components/ContentTeaser"
 import PioneerOriginals from "../components/PioneerOriginals"
 import PioneerLive from "../components/PioneerLive"
 import PioneerOne from "../components/PioneerOne"
@@ -15,6 +16,7 @@ import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
 const IndexPage = () => (
   <Layout>
     <SEO title="Join ThePioneer" />
+    <ContentTeaser></ContentTeaser>
     <Hero></Hero>
     <PioneerMission></PioneerMission>
     <Countdown></Countdown>
