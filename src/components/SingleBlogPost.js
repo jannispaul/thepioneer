@@ -1,14 +1,22 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { device } from "../theme/breakpoints"
 
-const StyledPost = styled.div`
+const StyledPost = styled.a`
+  position: relative;
+  display: flex;
+  text-decoration: none;
   background: white;
-  /* width: 100%; */
+  width: 100%;
   overflow: hidden;
+  flex-direction: column;
+  padding: 0px 20px 20px;
+  box-shadow: 0px 0px 0px 1px #e3e3e3;
+  margin: 20px 0;
   @media ${device.tablet} {
-    display: grid;
+    /* max-width: 305px; */
+    /* display: grid;
     grid-template-columns: 1fr 3fr;
     border-radius: 4px;
     margin: 20px;
@@ -19,29 +27,49 @@ const StyledPost = styled.div`
       box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
       transition: all 200ms;
       transform: translateY(-2px);
-    }
+    } */
   }
   @media ${device.laptop} {
-    display: block;
-    max-width: 300px;
+    /* display: block;
+    max-width: 300px; */
   }
 `
 
-const StyledImage = styled(Img)`
-  /* height: 100% !important; */
-  width: 100% !important;
+const StyledImage = styled.img`
+  height: 160px;
+  width: calc(100% + 40px);
+  max-height: 300px;
+  object-fit: cover;
+  margin: 0 -20px;
   @media ${device.tablet} {
-    height: 100% !important;
-    width: 100% !important;
   }
   @media ${device.laptop} {
-    display: block;
-    height: 200px !important;
-    width: 300px !important;
+    height: 260px;
   }
 `
+const Meta = styled.p`
+  font: 12px Poppins;
+`
+const Brand = styled.span`
+  display: inline-block;
+  background: #d3bdef;
+  padding: 4px 6px;
+  margin-right: 4px;
+  font-weight: 600;
+`
+const Author = styled.span`
+  display: inline-block;
+  background: #ddd;
+  padding: 4px 6px;
+  margin-right: 4px;
+  font-weight: 600;
+`
+
+const Title = styled.h4`
+  font: 700 1.125rem / 1.4 Poppins;
+  margin: 16px 0 12px 0;
+`
 const TextContainer = styled.div`
-  padding: 14px 20px 70px 20px;
   line-height: 1.3;
   grid-column: 2/3;
   position: relative;
@@ -49,10 +77,6 @@ const TextContainer = styled.div`
     font-size: 15px;
   }
   @media ${device.tablet} {
-    padding: 20px 30px 80px 30px;
-    & p {
-      font-size: 17px;
-    }
   }
   @media ${device.laptop} {
     position: inherit;
@@ -61,34 +85,68 @@ const TextContainer = styled.div`
 `
 const StyledDate = styled.p`
   text-transform: uppercase;
-  opacity: 0.7;
-  font-size: 13px;
+  font: 600 14px Poppins;
+  color: #8c8c8c;
   margin-bottom: 10px;
   @media ${device.mobileL} {
     font-size: 16px;
   }
 `
-const StyledLink = styled.a`
-  position: absolute;
-  bottom: 30px;
-  text-decoration: none;
-  padding-bottom: 3px;
-  background: linear-gradient(to right, red 0%, blue 100%) bottom no-repeat;
-  background-size: 100% 2px;
-  display: inline-block;
-`
-const HeroVideo = props => (
-  <StyledPost key={props.id}>
-    <StyledImage resolutions={props.image} alt={props.alt} objectFit="cover" />
-
+const HeroVideo = (props) => (
+  <StyledPost
+    key={props.id}
+    href={(() => {
+      if (props.brand === null) {
+        return (
+          "https://www.thepioneer.de/originals/others/articles/" + props.slug
+        )
+      } else if (props.type === "ArticleReduced" && props.podcast === null) {
+        return (
+          "https://www.thepioneer.de/originals/" +
+          props.brand.slug +
+          "/articles/" +
+          props.slug
+        )
+      } else if (props.type === "ArticleReduced" && props.podcast) {
+        return (
+          "https://www.thepioneer.de/originals/" +
+          props.brand.slug +
+          "/podcasts/" +
+          props.slug
+        )
+      } else if (props.type === "NewsletterReduced") {
+        return (
+          "https://www.thepioneer.de/originals/" +
+          props.brand.slug +
+          "/briefings/" +
+          props.slug
+        )
+      }
+    })()}
+  >
+    <StyledImage src={props.image} alt={props.alt} />
     <TextContainer>
-      <StyledDate>{props.date}</StyledDate>
-      <p
+      <Meta>
+        {props.brand !== null ? <Brand>{props.brand.title}</Brand> : ""} von{" "}
+        <Author>{props.authors[0].name}</Author>
+      </Meta>
+      <Title
         dangerouslySetInnerHTML={{
           __html: props.title,
         }}
+      ></Title>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: props.description,
+        }}
       ></p>
-      <StyledLink href={props.link}>Weiterlesen →</StyledLink>
+      <p>
+        {props.brand ? props.brand.title : ""} vom
+        <StyledDate>
+          {props.createdAt.substring(8, 10)}.{props.createdAt.substring(5, 7)}.
+          {props.createdAt.substring(0, 4)}{" "}
+        </StyledDate>
+      </p>
     </TextContainer>
   </StyledPost>
 )
