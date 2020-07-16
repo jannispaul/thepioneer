@@ -36,7 +36,7 @@ const StyledContainer = styled.div`
     transition: all 200ms ease;
     transform: scale(1.05);
   }
-  & > div > div {
+  & > div {
     display: block !important;
     width: calc(100vw - 20px) !important;
     border-radius: 10px;
