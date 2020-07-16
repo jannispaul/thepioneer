@@ -162,7 +162,8 @@ function ContentTeaser() {
   return (
     <StyledSection>
       <PioneerHeadline>Blog</PioneerHeadline>
-      <StyledGrid>
+      {data.homepage.id}
+      {/* <StyledGrid>
         {JSON.stringify(data.homepage.featured.content)}
         {data3.map(
           ({
@@ -192,35 +193,12 @@ function ContentTeaser() {
             ></SingleBlogPost>
           )
         )}
-      </StyledGrid>
+      </StyledGrid> */}
     </StyledSection>
   )
 }
 
 export default ContentTeaser
-// export const ContentTeaser = ({ data }) => {
-//   return (
-//     <StyledSection>
-//       <ApolloProvider client={client}></ApolloProvider>
-//       {/* <StyledGrid>
-//         {data.allWordpressPost.edges.map((post) => {
-//           return (
-//             <SingleBlogPost
-//               key={post.node.id}
-//               image={
-//                 post.node.featured_media.localFile.childImageSharp.resolutions
-//               }
-//               alt={post.node.featured_media.alt_text}
-//               date={post.node.date}
-//               title={post.node.title}
-//               link={post.node.link}
-//             ></SingleBlogPost>
-//           )
-//         })}
-//       </StyledGrid> */}
-//     </StyledSection>
-//   )
-// }
 
 const THEPIONEERTEASER = gql`
   query GetContent {
