@@ -204,10 +204,6 @@ const THEPIONEERTEASER = gql`
   query GetContent {
     homepage {
       id
-      __typename
-      featured {
-        title
-      }
     }
   }
 `
