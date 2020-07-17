@@ -23,13 +23,14 @@ const StyledSection = styled.section`
 const StyledGrid = styled.div`
   padding: 16px;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1168px;
   margin: auto;
   position: relative;
   @media ${device.tablet} {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    padding: 32px;
   }
   /* @media ${device.laptop} {
     display: grid;
@@ -151,10 +152,11 @@ function ContentTeaser() {
       transactionTime: 234,
     },
   }
-  const data3 = data2.homepage.featured.content.slice(
-    0,
-    data2.homepage.featured.content.length - 1
-  )
+  const content = data.homepage.featured.content.slice(0, 3)
+  // const data3 = data2.homepage.featured.content.slice(
+  //   0,
+  //   data2.homepage.featured.content.length - 1
+  // )
   // const data3 = data2.homepage.featured.content
   if (loading) return <p>Loading...</p>
   if (error)
@@ -169,11 +171,12 @@ function ContentTeaser() {
 
   return (
     <StyledSection>
-      <PioneerHeadline>Blog</PioneerHeadline>
-      {data.homepage.id}
-      {/* <StyledGrid>
-        {JSON.stringify(data.homepage.featured.content)}
-        {data3.map(
+      <PioneerHeadline center>Blog</PioneerHeadline>
+      {/* {data.homepage.id} */}
+      <StyledGrid>
+        {/* {JSON.stringify(content)} */}
+        {/* {JSON.stringify(data.homepage.featured.content)} */}
+        {content.map(
           ({
             id,
             title,
@@ -201,7 +204,7 @@ function ContentTeaser() {
             ></SingleBlogPost>
           )
         )}
-      </StyledGrid> */}
+      </StyledGrid>
     </StyledSection>
   )
 }
@@ -211,7 +214,60 @@ export default ContentTeaser
 const THEPIONEERTEASER = gql`
   query GetContent {
     homepage {
-      id
+      __typename
+      featured {
+        content {
+          ... on ArticleReduced {
+            __typename
+            title
+            description
+            slug
+            headerImage {
+              url
+              alt
+
+              width
+              height
+            }
+            createdAt
+            authors {
+              id
+              name
+            }
+            brand {
+              id
+              slug
+              title
+            }
+            podcast {
+              duration
+            }
+          }
+
+          ... on NewsletterReduced {
+            __typename
+            title
+            description
+            slug
+            headerImage {
+              url
+              alt
+              width
+              height
+            }
+            createdAt
+            authors {
+              id
+              name
+            }
+            brand {
+              id
+              slug
+              title
+            }
+          }
+        }
+      }
     }
   }
 `
