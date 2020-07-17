@@ -152,7 +152,7 @@ function ContentTeaser() {
       transactionTime: 234,
     },
   }
-  const content = data.homepage.featured.content.slice(0, 3)
+  // const content = data.homepage.featured.content.slice(0, 3)
   // const data3 = data2.homepage.featured.content.slice(
   //   0,
   //   data2.homepage.featured.content.length - 1
@@ -172,38 +172,37 @@ function ContentTeaser() {
   return (
     <StyledSection>
       <PioneerHeadline center>Blog</PioneerHeadline>
-      {/* {data.homepage.id} */}
       <StyledGrid>
-        {/* {JSON.stringify(content)} */}
-        {/* {JSON.stringify(data.homepage.featured.content)} */}
-        {content.map(
-          ({
-            id,
-            title,
-            description,
-            slug,
-            headerImage,
-            createdAt,
-            brand,
-            authors,
-            podcast,
-            __typename,
-          }) => (
-            <SingleBlogPost
-              key={id}
-              image={headerImage.url}
-              alt={headerImage.alt}
-              createdAt={createdAt}
-              title={title}
-              slug={slug}
-              description={description}
-              brand={brand}
-              authors={authors}
-              podcast={podcast}
-              type={__typename}
-            ></SingleBlogPost>
-          )
-        )}
+        {data.homepage.featured.content
+          .slice(0, 3)
+          .map(
+            ({
+              id,
+              title,
+              description,
+              slug,
+              headerImage,
+              createdAt,
+              brand,
+              authors,
+              podcast,
+              __typename,
+            }) => (
+              <SingleBlogPost
+                key={id}
+                image={headerImage.url}
+                alt={headerImage.alt}
+                createdAt={createdAt}
+                title={title}
+                slug={slug}
+                description={description}
+                brand={brand}
+                authors={authors}
+                podcast={podcast}
+                type={__typename}
+              ></SingleBlogPost>
+            )
+          )}
       </StyledGrid>
     </StyledSection>
   )
