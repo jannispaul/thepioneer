@@ -5,7 +5,7 @@ import Hero from "../components/Hero"
 import PioneerJournalism from "../components/PioneerJournalism"
 import PioneerMission from "../components/PioneerMission"
 import ContentTeaser from "../components/ContentTeaser"
-import PioneerContent from "../components/PioneerContent"
+// import PioneerContent from "../components/PioneerContent"
 import PioneerOriginals from "../components/PioneerOriginals"
 import PioneerLive from "../components/PioneerLive"
 import PioneerOne from "../components/PioneerOne"
@@ -15,7 +15,7 @@ import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
 const IndexPage = () => (
   <Layout>
     <SEO title="Join ThePioneer" />
-    <PioneerContent></PioneerContent>
+    {/* <PioneerContent></PioneerContent> */}
     <Hero></Hero>
     <PioneerMission></PioneerMission>
     <PioneerOriginals></PioneerOriginals>
