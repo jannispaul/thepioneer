@@ -55,18 +55,12 @@ const Description = styled.p`
   font-size: 17px;
 `
 const TextContainer = styled.div`
-height: 100%;
-display: grid;
-grid-template-rows: auto auto 1fr auto;
-  /* line-height: 1.3;
-  grid-column: 2/3;
-  position: relative;
-
-  @media ${device.tablet} {
-  }
-  @media ${device.laptop} {
-  } */
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 `
+const FlexContainer = styled.div``
 const Button = styled.a`
   display: inline-block;
   padding: 10px;
@@ -96,6 +90,12 @@ const StyledDate = styled.p`
   color: #8c8c8c;
   margin-bottom: 10px;
 `
+// const CardFooter = styled.div`
+//   display: block;
+//   & > div {
+//     display: inline-block;
+//   }
+// `
 const HeroVideo = (props) => (
   <StyledPost
     key={props.id}
@@ -130,21 +130,23 @@ const HeroVideo = (props) => (
   >
     <StyledImage src={props.image} alt={props.alt} />
     <TextContainer>
-      <Meta>
-        {props.brand !== null ? <Brand>{props.brand.title}</Brand> : ""} von{" "}
-        &nbsp;
-        <Author>{props.authors[0].name}</Author>
-      </Meta>
-      <Title
-        dangerouslySetInnerHTML={{
-          __html: props.title,
-        }}
-      ></Title>
-      <Description
-        dangerouslySetInnerHTML={{
-          __html: props.description,
-        }}
-      ></Description>
+      <FlexContainer>
+        <Meta>
+          {props.brand !== null ? <Brand>{props.brand.title}</Brand> : ""} von{" "}
+          &nbsp;
+          <Author>{props.authors[0].name}</Author>
+        </Meta>
+        <Title
+          dangerouslySetInnerHTML={{
+            __html: props.title,
+          }}
+        ></Title>
+        <Description
+          dangerouslySetInnerHTML={{
+            __html: props.description,
+          }}
+        ></Description>
+      </FlexContainer>
       <div>
         <Button href="">Jetzt lesen</Button>
 
