@@ -25,7 +25,8 @@ const StyledGrid = styled.div`
   padding: 16px;
   width: 100%;
   max-width: 1168px;
-  margin: auto;
+  
+  margin: -40px auto 0;
   position: relative;
   @media ${device.tablet} {
     display: grid;
