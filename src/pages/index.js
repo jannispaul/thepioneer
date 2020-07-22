@@ -2,10 +2,8 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Hero from "../components/Hero"
-import Countdown from "../components/Countdown"
 import PioneerJournalism from "../components/PioneerJournalism"
 import PioneerMission from "../components/PioneerMission"
-// import PioneerContent from "../components/PioneerContent"
 import ContentTeaser from "../components/ContentTeaser"
 import PioneerOriginals from "../components/PioneerOriginals"
 import PioneerLive from "../components/PioneerLive"
@@ -16,13 +14,11 @@ import PioneerOneImage from "../components/ImageComponents/PioneerOneImage"
 const IndexPage = () => (
   <Layout>
     <SEO title="Join ThePioneer" />
-    <ContentTeaser></ContentTeaser>
     <Hero></Hero>
     <PioneerMission></PioneerMission>
-    <Countdown></Countdown>
-    <PioneerJournalism></PioneerJournalism>
-    {/* <PioneerContent></PioneerContent> */}
     <PioneerOriginals></PioneerOriginals>
+    <PioneerJournalism></PioneerJournalism>
+    <ContentTeaser></ContentTeaser>
     <PioneerOneImage></PioneerOneImage>
     <PioneerOne></PioneerOne>
     <PioneerLive></PioneerLive>

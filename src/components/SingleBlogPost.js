@@ -14,25 +14,8 @@ const StyledPost = styled.a`
   padding: 0px 20px 20px;
   box-shadow: 0px 0px 0px 1px #e3e3e3;
   margin: 20px 0;
-  @media ${device.tablet} {
-    /* max-width: 305px; */
-    /* display: grid;
-    grid-template-columns: 1fr 3fr;
-    border-radius: 4px;
-    margin: 20px;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
-    transition: all 200ms;
-    transform: translateY(0);
-    :hover {
-      box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
-      transition: all 200ms;
-      transform: translateY(-2px);
-    } */
-  }
-  @media ${device.laptop} {
-    /* display: block;
-    max-width: 300px; */
-  }
+  /* @media ${device.tablet} {
+  } */
 `
 
 const StyledImage = styled.img`
@@ -48,7 +31,7 @@ const StyledImage = styled.img`
   }
 `
 const Meta = styled.p`
-  font: 12px Poppins;
+  font: 600 12px Poppins;
 `
 const Brand = styled.span`
   display: inline-block;
@@ -61,7 +44,6 @@ const Author = styled.span`
   display: inline-block;
   background: #ddd;
   padding: 4px 6px;
-  margin-right: 4px;
   font-weight: 600;
 `
 
@@ -69,28 +51,50 @@ const Title = styled.h4`
   font: 700 1.125rem / 1.4 Poppins;
   margin: 16px 0 12px 0;
 `
+const Description = styled.p`
+  font-size: 17px;
+`
 const TextContainer = styled.div`
-  line-height: 1.3;
+height: 100%;
+display: grid;
+grid-template-rows: auto auto 1fr auto;
+  /* line-height: 1.3;
   grid-column: 2/3;
   position: relative;
-  & p {
-    font-size: 15px;
-  }
+
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
-    position: inherit;
-    display: block;
+  } */
+`
+const Button = styled.a`
+  display: inline-block;
+  padding: 10px;
+  font: 600 14px Poppins;
+  text-decoration: none;
+  border: none;
+  color: white;
+  background: #6622c3;
+  margin-top: 12px;
+  margin-right: 10px;
+  width: auto;
+  border-radius: 4px;
+
+  :before {
+    display: inline-block;
+    content: "";
+    -webkit-font-smoothing: antialiased;
+    font: 400 22px / 22px Icons;
+    vertical-align: middle;
+    transform: translate(0px, -5%);
+    margin-right: 0.25em;
   }
 `
 const StyledDate = styled.p`
-  text-transform: uppercase;
+  display: inline-block;
   font: 600 14px Poppins;
   color: #8c8c8c;
   margin-bottom: 10px;
-  @media ${device.mobileL} {
-    font-size: 16px;
-  }
 `
 const HeroVideo = (props) => (
   <StyledPost
@@ -128,6 +132,7 @@ const HeroVideo = (props) => (
     <TextContainer>
       <Meta>
         {props.brand !== null ? <Brand>{props.brand.title}</Brand> : ""} von{" "}
+        &nbsp;
         <Author>{props.authors[0].name}</Author>
       </Meta>
       <Title
@@ -135,18 +140,20 @@ const HeroVideo = (props) => (
           __html: props.title,
         }}
       ></Title>
-      <p
+      <Description
         dangerouslySetInnerHTML={{
           __html: props.description,
         }}
-      ></p>
-      <p>
-        {props.brand ? props.brand.title : ""} vom
+      ></Description>
+      <div>
+        <Button href="">Jetzt lesen</Button>
+
+        {/* {props.brand ? props.brand.title : ""}  */}
         <StyledDate>
-          {props.createdAt.substring(8, 10)}.{props.createdAt.substring(5, 7)}.
-          {props.createdAt.substring(0, 4)}{" "}
+          vom {props.createdAt.substring(8, 10)}.
+          {props.createdAt.substring(5, 7)}.{props.createdAt.substring(0, 4)}{" "}
         </StyledDate>
-      </p>
+      </div>
     </TextContainer>
   </StyledPost>
 )

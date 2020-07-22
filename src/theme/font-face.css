@@ -21,13 +21,21 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"),
+    url("/fonts/Poppins-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
   src: local("Poppins Bold"), local("Poppins-Bold"),
     url("/fonts/Poppins-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Poppins";
   font-style: italic;
-  font-weight: 700;
+  font-weight: 800;
   font-display: swap;
   src: local("Poppins ExtraBoldItalic"), local("Poppins-ExtraBoldItalic"),
     url("/fonts/Poppins-ExtraBoldItalic.woff2") format("woff2");
@@ -39,6 +47,13 @@
   font-display: swap;
   src: local("Noe Text Regular"), local("NoeTextRegular"),
     url("/fonts/NoeTextRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/fonts/Icons-Regular.woff2") format("woff2");
 }
 
 body {
