@@ -19,12 +19,16 @@ const StyledPost = styled.a`
 `
 
 const StyledImage = styled.img`
-  height: 160px;
+  height: 180px;
   width: calc(100% + 40px);
   max-height: 300px;
   object-fit: cover;
   margin: 0 -20px;
-  @media ${device.tablet} {
+  @media ${device.mobileM} {
+    height: 230px;
+  }
+  @media ${device.mobileM} {
+    height: 300px;
   }
   @media ${device.laptop} {
     height: 260px;
