@@ -65,9 +65,10 @@ const TextContainer = styled.div`
   justify-content: space-between;
 `
 const FlexContainer = styled.div``
-const Button = styled.a`
+
+const Button = styled.p`
   display: inline-block;
-  padding: 10px;
+  padding: 11px 10px 9px;
   font: 600 14px Poppins;
   text-decoration: none;
   border: none;
@@ -80,7 +81,8 @@ const Button = styled.a`
 
   :before {
     display: inline-block;
-    content: "";
+    content: ${(props) =>
+      props.podcast ? '""' : '""'}; // Mic if podcast otherwise letter
     -webkit-font-smoothing: antialiased;
     font: 400 22px / 22px Icons;
     vertical-align: middle;
@@ -152,9 +154,9 @@ const HeroVideo = (props) => (
         ></Description>
       </FlexContainer>
       <div>
-        <Button href="">Jetzt lesen</Button>
-
-        {/* {props.brand ? props.brand.title : ""}  */}
+        <Button podcast={props.podcast}>
+          Jetzt {props.podcast ? "anhören" : "lesen"}
+        </Button>
         <StyledDate>
           vom {props.createdAt.substring(8, 10)}.
           {props.createdAt.substring(5, 7)}.{props.createdAt.substring(0, 4)}{" "}
