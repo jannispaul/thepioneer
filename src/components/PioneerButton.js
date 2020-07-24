@@ -8,7 +8,7 @@ import { ICONS } from "../theme/Icons"
 
 const StyledContainer = styled.div`
   transform-origin: 100% 50%;
-  transform: ${props => (props.small ? "scale(0.7)" : "scale(1)")};
+  transform: ${(props) => (props.small ? "scale(0.7)" : "scale(1)")};
   display: inline-block;
 
   & > small {
@@ -32,8 +32,8 @@ const StyledButton = styled.a`
   justify-content: center;
   font-size: 21px;
   font-weight: 600;
-  color: ${props => (props.color ? props.color : "#fff")};
-  background: ${props => (props.background ? props.background : "#1f1f1f")};
+  color: ${(props) => (props.color ? props.color : "#fff")};
+  background: ${(props) => (props.background ? props.background : "#1f1f1f")};
   transition: background 0.2s ease;
 
   span {
@@ -41,7 +41,7 @@ const StyledButton = styled.a`
   }
   & > svg {
     display: inline-block;
-    max-width: ${props => (props.width ? props.width : "120px")};
+    max-width: ${(props) => (props.width ? props.width : "120px")};
     height: auto;
   }
   :hover {
@@ -69,7 +69,7 @@ const StyledIcon = styled.div`
   display: inline-block;
 
   & > svg {
-    fill: ${props => (props.color ? props.color : "#fff")};
+    fill: ${(props) => (props.color ? props.color : "#fff")};
     height: 12px;
     width: 12px;
     margin-left: 4px;
@@ -112,7 +112,11 @@ function PioneerButton(props) {
           <Icon icon={ICONS.CHEVRON} alt="Pfeil nach rechts" />
         </StyledIcon>
       </StyledButton>
-      {props.subline ? <small>Wähle selbst, wie viel du beiträgst.</small> : ""}
+      {props.subline ? (
+        <small>Wählen Sie selbst, wie viel Sie beitragen.</small>
+      ) : (
+        ""
+      )}
     </StyledContainer>
   )
 }
