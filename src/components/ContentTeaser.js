@@ -104,7 +104,9 @@ function ContentTeaser() {
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error : {error.message}</p>
-
+  // const cleanData = data.homepage.featured.content.filter(
+  //   (value) => JSON.stringify(value) !== "{}"
+  // )
   return (
     <StyledSection>
       <HeadlineContainer>
@@ -116,7 +118,8 @@ function ContentTeaser() {
       </HeadlineContainer>
       <StyledGrid>
         {data.homepage.featured.content
-          .slice(0, 3)
+          .filter((el) => Object.keys(el).length)
+          .slice(1, 4)
           .map(
             ({
               id,
