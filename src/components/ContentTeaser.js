@@ -119,7 +119,7 @@ function ContentTeaser() {
       <StyledGrid>
         {data.homepage.featured.content
           .filter((el) => Object.keys(el).length)
-          .slice(1, 4)
+          .slice(0, 4)
           .map(
             ({
               id,
