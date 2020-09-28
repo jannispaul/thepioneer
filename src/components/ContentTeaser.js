@@ -101,12 +101,17 @@ const StyledButtonContainer = styled.div`
 `
 function ContentTeaser() {
   const { loading, error, data } = useQuery(THEPIONEERTEASER)
-
+  let cleanData
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error : {error.message}</p>
-  // const cleanData = data.homepage.featured.content.filter(
-  //   (value) => JSON.stringify(value) !== "{}"
-  // )
+
+  // When data was received, delete empty objects from content
+  if (data) {
+    cleanData = data.homepage.featured.content.filter(
+      (value) => JSON.stringify(value) !== "{}"
+    )
+    // console.log(data, cleanData)
+  }
   return (
     <StyledSection>
       <HeadlineContainer>
@@ -117,9 +122,8 @@ function ContentTeaser() {
         </div>
       </HeadlineContainer>
       <StyledGrid>
-        {data.homepage.featured.content
-          .filter((el) => Object.keys(el).length)
-          .slice(0, 4)
+        {cleanData
+          .slice(0, 3)
           .map(
             ({
               id,
