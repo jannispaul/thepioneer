@@ -4,7 +4,7 @@ import SEO from "../components/SEO"
 import Hero from "../components/Hero"
 import PioneerJournalism from "../components/PioneerJournalism"
 import PioneerMission from "../components/PioneerMission"
-import ContentTeaser from "../components/ContentTeaser"
+// import ContentTeaser from "../components/ContentTeaser"
 // import PioneerContent from "../components/PioneerContent"
 import PioneerOriginals from "../components/PioneerOriginals"
 import PioneerLive from "../components/PioneerLive"
@@ -20,7 +20,7 @@ const IndexPage = () => (
     <PioneerMission></PioneerMission>
     <PioneerOriginals></PioneerOriginals>
     <PioneerJournalism></PioneerJournalism>
-    <ContentTeaser></ContentTeaser>
+    {/* <ContentTeaser></ContentTeaser> */}
     <PioneerOneImage></PioneerOneImage>
     <PioneerOne></PioneerOne>
     <PioneerLive></PioneerLive>
