@@ -102,9 +102,8 @@ const StyledDate = styled.p`
 //     display: inline-block;
 //   }
 // `
-const HeroVideo = (props) => (
+const SingleBlogPost = (props) => (
   <StyledPost
-    key={props.id}
     href={(() => {
       if (props.brand === null) {
         return (
@@ -166,4 +165,4 @@ const HeroVideo = (props) => (
   </StyledPost>
 )
 
-export default HeroVideo
+export default SingleBlogPost

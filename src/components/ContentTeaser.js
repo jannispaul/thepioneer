@@ -104,13 +104,130 @@ function ContentTeaser() {
   let cleanData
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error : {error.message}</p>
+  // let data2 = {
+  //   homepage: {
+  //     __typename: "Homepage",
+  //     featured: {
+  //       content: [
+  //         {},
+  //         {
+  //           __typename: "ArticleReduced",
+  //           title: "Der Boxer aus Mitte ",
+  //           description:
+  //             "Er ist Musikmanager und Seiteneinsteiger. Joe Chialo will den Hauptstadt-Wahlkreis gewinnen. ",
+  //           slug: "der-boxer-aus-mitte",
+  //           headerImage: {
+  //             url:
+  //               "//image-service.thepioneer.de/show/mj324dykhxwi/6XuzlWEwGj6r9oT0MdtQQ2/c7cf94f5b4ff72e92b09eb3828a25a34/joe-chialo.jpg",
+  //             alt: "Joe Chialo ",
+  //             width: 2200,
+  //             height: 1307,
+  //           },
+  //           createdAt: "2020-10-13T20:58",
+  //           authors: [
+  //             {
+  //               id: "QXV0aG9yLW1pY2hhZWwtYnJvZWNrZXI=",
+  //               name: "Michael Bröcker",
+  //             },
+  //           ],
+  //           brand: null,
+  //           podcast: null,
+  //         },
+  //         {
+  //           __typename: "NewsletterReduced",
+  //           title: "Auf der Suche nach dem Scholz-Effekt",
+  //           description:
+  //             "Olaf Scholz ist populärster Sozialdemokrat und nominierter Kanzlerkandidat. Doch es hilft kaum. ",
+  //           slug: "auf-der-suche-nach-dem-scholz-effekt",
+  //           headerImage: {
+  //             url:
+  //               "//image-service.thepioneer.de/show/mj324dykhxwi/14RN5bIcnnIWWD0e6kvhFS/453afb056e452ff98a793f9bea36c125/20201014_media_pioneer_hauptstadt_aufmacher_olaf_scholz_flagge.jpg",
+  //             alt: "Scholz",
+  //             width: 3000,
+  //             height: 1772,
+  //           },
+  //           createdAt: "2020-10-13T06:30",
+  //           authors: [
+  //             {
+  //               id: "QXV0aG9yLW1pY2hhZWwtYnJvZWNrZXI=",
+  //               name: "Michael Bröcker",
+  //             },
+  //             {
+  //               id: "QXV0aG9yLWdvcmRvbi1yZXBpbnNraQ==",
+  //               name: "Gordon Repinski",
+  //             },
+  //           ],
+  //           brand: {
+  //             id: "QnJhbmQtaGF1cHRzdGFkdC1kYXMtYnJpZWZpbmc=",
+  //             slug: "hauptstadt-das-briefing",
+  //             title: "Hauptstadt - Das Briefing",
+  //           },
+  //         },
+  //         {
+  //           __typename: "NewsletterReduced",
+  //           title: "Impfstoff-Erprobung abgebrochen",
+  //           description: "Das Morning Briefing vom 14.10.2020",
+  //           slug: "impfstoff-erprobung-abgebrochen",
+  //           headerImage: {
+  //             url:
+  //               "//image-service.thepioneer.de/show/mj324dykhxwi/5m4kCQtFHWJC6Pbgk6dXwW/2ea80e14de836f5924e1c7cf2e8635fd/20201014-header-morning-briefing-media-pioneer-kanzleramt-gewitter.jpg",
+  //             alt:
+  //               "20201014-header-morning-briefing-media-pioneer-kanzleramt-gewitter",
+  //             width: 3840,
+  //             height: 2160,
+  //           },
+  //           createdAt: "2020-10-14T00:00",
+  //           authors: [
+  //             {
+  //               id: "QXV0aG9yLWdhYm9yLXN0ZWluZ2FydA==",
+  //               name: "Gabor Steingart",
+  //             },
+  //           ],
+  //           brand: {
+  //             id: "QnJhbmQtc3RlaW5nYXJ0cy1tb3JuaW5nLWJyaWVmaW5n",
+  //             slug: "steingarts-morning-briefing",
+  //             title: "Steingarts Morning Briefing",
+  //           },
+  //         },
+  //         {
+  //           __typename: "ArticleReduced",
+  //           title: "Wo bleibt der Olaf-Wumms? ",
+  //           description:
+  //             "Olaf Scholz kann die SPD bisher nicht erwecken. Matthias Machnig ahnt, warum nicht.  ",
+  //           slug: "wo-bleibt-der-olaf-wumms",
+  //           headerImage: {
+  //             url:
+  //               "//image-service.thepioneer.de/show/mj324dykhxwi/4xB7vPuGnT3WdwuO9r2PgL/77f078350cb58ee8a9f9cd059fe13a35/20200607-header-hauptstadtbriefing-media-pioneer-scholz-football.jpg",
+  //             alt: "Scholz",
+  //             width: 3000,
+  //             height: 1772,
+  //           },
+  //           createdAt: "2020-10-13T16:00",
+  //           authors: [
+  //             {
+  //               id: "QXV0aG9yLW1hdHRoaWFzLW1hY2huaWc=",
+  //               name: "Matthias Machnig ",
+  //             },
+  //           ],
+  //           brand: null,
+  //           podcast: null,
+  //         },
+  //       ],
+  //     },
+  //   },
+  //   extensions: {
+  //     transactionId: "kzRkKJJi6Ge34xvaU6JHl",
+  //     transactionTime: 364,
+  //   },
+  // }
 
   // When data was received, delete empty objects from content
   if (data) {
+    // console.log(data2)
     cleanData = data.homepage.featured.content.filter(
       (value) => JSON.stringify(value) !== "{}"
     )
-    // console.log(data, cleanData)
+    // console.log(cleanData)
   }
   return (
     <StyledSection>
@@ -125,20 +242,22 @@ function ContentTeaser() {
         {cleanData
           .slice(0, 3)
           .map(
-            ({
-              id,
-              title,
-              description,
-              slug,
-              headerImage,
-              createdAt,
-              brand,
-              authors,
-              podcast,
-              __typename,
-            }) => (
+            (
+              {
+                title,
+                description,
+                slug,
+                headerImage,
+                createdAt,
+                brand,
+                authors,
+                podcast,
+                __typename,
+              },
+              index
+            ) => (
               <SingleBlogPost
-                key={id}
+                key={index}
                 image={headerImage.url}
                 alt={headerImage.alt}
                 createdAt={createdAt}
@@ -176,7 +295,6 @@ const THEPIONEERTEASER = gql`
             headerImage {
               url
               alt
-
               width
               height
             }
