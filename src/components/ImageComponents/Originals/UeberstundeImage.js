@@ -19,14 +19,14 @@ export default () => (
       query {
         file(relativePath: { eq: "originals/ueberstunde.jpg" }) {
           childImageSharp {
-            fixed(width: 310) {
+            fixed(width: 400) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       return (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}

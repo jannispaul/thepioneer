@@ -17,21 +17,21 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "originals/wall-street-weekly.jpg" }) {
+        file(relativePath: { eq: "originals/showroom.jpg" }) {
           childImageSharp {
-            fixed(width: 310) {
+            fixed(width: 400) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       return (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
-          alt="Frau steht vor den Wolkenkratzern an der Wallstreet"
+          alt="Collage eines Frauengesichts, zur Hälfte gezeichnet, zur Hälfte Foto mit einer Kamera vor dem einen Auge"
         />
       )
     }}

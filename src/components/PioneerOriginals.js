@@ -4,7 +4,7 @@ import { device } from "../theme/breakpoints"
 import Slider from "../components/Slider"
 import PioneerHeadline from "./PioneerHeadline"
 
-import WallStreetWeeklyImage from "../components/ImageComponents/Originals/WallStreetWeeklyImage"
+import WallStreetDailyImage from "../components/ImageComponents/Originals/WallStreetDailyImage"
 import UeberstundeImage from "../components/ImageComponents/Originals/UeberstundeImage"
 import BeyondTheObviousImage from "../components/ImageComponents/Originals/BeyondTheObviousImage"
 import TheAmericansImage from "../components/ImageComponents/Originals/TheAmericansImage"
@@ -12,6 +12,8 @@ import MorningBriefingImage from "../components/ImageComponents/Originals/Mornin
 import HauptstadtBriefingImage from "../components/ImageComponents/Originals/HauptstadtBriefingImage"
 import TechBriefingImage from "../components/ImageComponents/Originals/TechBriefingImage"
 import DerAchteTagImage from "../components/ImageComponents/Originals/DerAchteTagImage"
+import RaceToTheWhiteHouseImage from "../components/ImageComponents/Originals/RaceToTheWhiteHouseImage"
+import ShowroomImage from "../components/ImageComponents/Originals/ShowroomImage"
 
 const StyledSection = styled.section`
   background: #1f1f1f;
@@ -51,11 +53,11 @@ const PioneerOriginals = () => (
         <MorningBriefingImage></MorningBriefingImage>
       </a>
       <a
-        href="https://www.thepioneer.de/originals/wall-street-weekly"
+        href="https://www.thepioneer.de/originals/wall-street-daily"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <WallStreetWeeklyImage></WallStreetWeeklyImage>
+        <WallStreetDailyImage></WallStreetDailyImage>
       </a>
       <a
         href="https://www.thepioneer.de/originals/die-ueberstunde"
@@ -98,6 +100,20 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <TechBriefingImage></TechBriefingImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/race-to-the-white-house/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <RaceToTheWhiteHouseImage></RaceToTheWhiteHouseImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/showroom/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ShowroomImage></ShowroomImage>
       </a>
     </Slider>
   </StyledSection>

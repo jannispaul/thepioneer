@@ -65,7 +65,7 @@ const CookieNotice = () => (
       debug={false}
       location="bottom"
       buttonText="Akzeptieren"
-      cookieName="WallStreetWeeklyCookieNoticeAccepted"
+      cookieName="ThePioneerCookieNoticeAccepted"
       style={{
         background: "#1f1f1f",
         color: "#fff",
