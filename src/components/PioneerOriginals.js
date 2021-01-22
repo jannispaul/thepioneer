@@ -7,7 +7,6 @@ import PioneerHeadline from "./PioneerHeadline"
 import WallStreetDailyImage from "../components/ImageComponents/Originals/WallStreetDailyImage"
 import UeberstundeImage from "../components/ImageComponents/Originals/UeberstundeImage"
 import BeyondTheObviousImage from "../components/ImageComponents/Originals/BeyondTheObviousImage"
-import TheAmericansImage from "../components/ImageComponents/Originals/TheAmericansImage"
 import MorningBriefingImage from "../components/ImageComponents/Originals/MorningBriefingImage"
 import HauptstadtBriefingImage from "../components/ImageComponents/Originals/HauptstadtBriefingImage"
 import TechBriefingImage from "../components/ImageComponents/Originals/TechBriefingImage"
@@ -72,13 +71,6 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <BeyondTheObviousImage></BeyondTheObviousImage>
-      </a>
-      <a
-        href="https://www.thepioneer.de/originals/the-americans"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <TheAmericansImage></TheAmericansImage>
       </a>
       <a
         href="https://www.thepioneer.de/originals/der-achte-tag"
