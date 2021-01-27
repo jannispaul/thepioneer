@@ -102,6 +102,7 @@ const StyledButtonContainer = styled.div`
 function ContentTeaser() {
   const { loading, error, data } = useQuery(THEPIONEERTEASER)
   let cleanData
+  console.log("test")
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error : {error.message}</p>
   // let data2 = {
@@ -223,14 +224,18 @@ function ContentTeaser() {
 
   // When data was received, delete empty objects from content
   if (data) {
-    // console.log(data2)
+    // console.log(data)
     cleanData = data.homepage.featured.content.filter(
-      (value) => JSON.stringify(value) !== "{}"
+      // Make sure data is not empty and data objects have more than 2 keys (arbitrary number)
+      (value) => JSON.stringify(value) !== "{}" && Object.keys(value).length > 2
     )
-    // console.log(cleanData)
   }
   return (
     <StyledSection>
+      {/* {JSON.stringify(data)}
+      <br />
+      <br />
+      {JSON.stringify(cleanData)} */}
       <HeadlineContainer>
         <div>
           <img src={stiftImage} alt="Bleistift" />
