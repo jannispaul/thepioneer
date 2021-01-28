@@ -102,9 +102,9 @@ const StyledButtonContainer = styled.div`
 function ContentTeaser() {
   const { loading, error, data } = useQuery(THEPIONEERTEASER)
   let cleanData
-  console.log("test")
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error : {error.message}</p>
+  //www.thepioneer.de/api/graphql API EndPoint
   // let data2 = {
   //   homepage: {
   //     __typename: "Homepage",
@@ -224,9 +224,9 @@ function ContentTeaser() {
 
   // When data was received, delete empty objects from content
   if (data) {
-    // console.log(data)
+    // Filter data since it can contain empty ebjects
     cleanData = data.homepage.featured.content.filter(
-      // Make sure data is not empty and data objects have more than 2 keys (arbitrary number)
+      // Make sure data is not empty and data objects have more than 2 keys (arbitrary number, those objects usually have 8 or 9 keys)
       (value) => JSON.stringify(value) !== "{}" && Object.keys(value).length > 2
     )
   }
