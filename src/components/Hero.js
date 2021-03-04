@@ -1,43 +1,44 @@
 import React from "react"
 import styled from "styled-components"
-import HeroPlaceHolderImage from "./ImageComponents/HeroPlaceHolderImage"
-import HeroShipImage from "./ImageComponents/HeroShipImage"
 import PioneerButton from "./PioneerButton"
 import { device } from "../theme/breakpoints"
-import heroVideo from "../images/hero.mp4"
+import heroVideo from "../images/hero-cinemagraph.mp4"
+import heroVideoMobile from "../images/hero-cinemagraph-mobile.mp4"
 // import heroVideoWEBM from "../images/hero.webm"
 // import hero from "../images/hero.png"
-import Waves from "./ImageComponents/WavesImages"
 
 const StyledSection = styled.section`
   display: block;
   position: relative;
   width: 100%;
-  background: #f3eefb;
 `
 const Container = styled.div`
-  max-width: 1168px;
+  width: 100%;
+  max-width: 100%;
   margin: auto;
-  padding: 16px;
-  position: relative;
+  /* height: 80vh; */
 
-  @media ${device.tablet} {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 70px 24px 0;
-  }
-
-  p {
-    margin-bottom: 20px;
-  }
   video {
-    width: 83%;
-    left: 0;
-    right: 5px;
-    margin: auto;
-    top: 10%;
-    z-index: 10;
-    position: absolute;
+    /* position: absolute; */
+    /* min-width: 100%; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  video:first-of-type {
+    display: none;
+  }
+  video:last-of-type {
+    display: block;
+  }
+  @media ${device.tablet} {
+    video:last-of-type {
+      display: none;
+    }
+    video:first-of-type {
+      display: block;
+    }
   }
 `
 const StyledH1 = styled.h1``
@@ -55,44 +56,48 @@ const ContentContainer = styled.div`
     max-width: 50%;
   }
 `
-const ShipContainer = styled.div`
-  @media ${device.tablet} {
-    order: 3;
-    width: 100%;
-    margin-top: -50px;
-    margin-bottom: -20px;
-  }
-`
+// const ShipContainer = styled.div`
+//   @media ${device.tablet} {
+//     order: 3;
+//     width: 100%;
+//     margin-top: -50px;
+//     margin-bottom: -20px;
+//   }
+// `
 
 const HeroVideo = () => (
   <StyledSection>
     {/* <HeroImage></HeroImage> */}
     <Container>
-      <VideoContainer>
-        <video
-          loop
-          muted
-          playsInline
-          autoPlay
-          disableremoteplayback="true"
-          // poster={hero}
-        >
-          <source src={heroVideo} />
-          {/* <source src={heroVideoWEBM} /> */}
-        </video>
-        <HeroPlaceHolderImage></HeroPlaceHolderImage>
-      </VideoContainer>
-      <ShipContainer>
-        <HeroShipImage></HeroShipImage>
-        <Waves></Waves>
-      </ShipContainer>
-      <ContentContainer>
+      <video
+        loop
+        muted
+        playsInline
+        autoPlay
+        disableremoteplayback="true"
+        // poster={hero}
+      >
+        <source src={heroVideo} />
+        {/* <source src={heroVideoWEBM} /> */}
+      </video>
+      <video
+        loop
+        muted
+        playsInline
+        autoPlay
+        disableremoteplayback="true"
+        // poster={hero}
+      >
+        <source src={heroVideoMobile} />
+        {/* <source src={heroVideoWEBM} /> */}
+      </video>
+      {/* <ContentContainer>
         <StyledH1>Wahrheit gibt es nur zu zweien.</StyledH1>
         <p>
           Zusammen mit Ihnen. Gemeinsam können wir den Journalismus neu beleben.
         </p>
         <PioneerButton subline></PioneerButton>
-      </ContentContainer>
+      </ContentContainer> */}
     </Container>
   </StyledSection>
 )
