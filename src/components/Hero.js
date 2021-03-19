@@ -28,18 +28,18 @@ const Container = styled.div`
     object-fit: cover;
     z-index: -1;
   }
-  video:first-of-type {
+  video:last-of-type {
     display: none;
   }
-  video:last-of-type {
+  video:first-of-type {
     display: block;
   }
   @media ${device.tablet} {
     height: 56.52vw;
-    video:last-of-type {
+    video:first-of-type {
       display: none;
     }
-    video:first-of-type {
+    video:last-of-type {
       display: block;
     }
   }
@@ -72,6 +72,17 @@ const HeroVideo = () => (
   <StyledSection>
     {/* <HeroImage></HeroImage> */}
     <Container>
+     <video
+        loop
+        muted
+        playsInline
+        autoPlay
+        disableremoteplayback="true"
+        poster={heroPosterMobile}
+      >
+        <source src={heroVideoMobile} type="video/mp4"/>
+        {/* <source src={heroVideoWEBM} /> */}
+      </video>
       <video
         loop
         muted
@@ -83,17 +94,7 @@ const HeroVideo = () => (
         <source src={heroVideo} type="video/mp4"/>
         {/* <source src={heroVideoWEBM} /> */}
       </video>
-      <video
-        loop
-        muted
-        playsInline
-        autoPlay
-        disableremoteplayback="true"
-        poster={heroPosterMobile}
-      >
-        <source src={heroVideoMobile} type="video/mp4"/>
-        {/* <source src={heroVideoWEBM} /> */}
-      </video>
+     
       {/* <ContentContainer>
         <StyledH1>Wahrheit gibt es nur zu zweien.</StyledH1>
         <p>
