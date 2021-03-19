@@ -16,6 +16,7 @@ const Container = styled.div`
   width: 100%;
   max-width: 100%;
   margin: auto;
+  height: 100vw;
   /* height: 80vh; */
 
   video {
@@ -33,6 +34,7 @@ const Container = styled.div`
     display: block;
   }
   @media ${device.tablet} {
+    height: 56.52vw;
     video:last-of-type {
       display: none;
     }
