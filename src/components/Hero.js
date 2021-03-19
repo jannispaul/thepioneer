@@ -5,7 +5,8 @@ import { device } from "../theme/breakpoints"
 import heroVideo from "../images/hero-cinemagraph.mp4"
 import heroVideoMobile from "../images/hero-cinemagraph-mobile.mp4"
 // import heroVideoWEBM from "../images/hero.webm"
-// import hero from "../images/hero.png"
+ import heroPoster from "../images/hero-cinemagraph.jpg"
+ import heroPosterMobile from "../images/hero-cinemagraph-mobile.jpg"
 
 const StyledSection = styled.section`
   display: block;
@@ -77,9 +78,9 @@ const HeroVideo = () => (
         playsInline
         autoPlay
         disableremoteplayback="true"
-        // poster={hero}
+        poster={heroPoster}
       >
-        <source src={heroVideo} />
+        <source src={heroVideo} type="video/mp4"/>
         {/* <source src={heroVideoWEBM} /> */}
       </video>
       <video
@@ -88,9 +89,9 @@ const HeroVideo = () => (
         playsInline
         autoPlay
         disableremoteplayback="true"
-        // poster={hero}
+        poster={heroPosterMobile}
       >
-        <source src={heroVideoMobile} />
+        <source src={heroVideoMobile} type="video/mp4"/>
         {/* <source src={heroVideoWEBM} /> */}
       </video>
       {/* <ContentContainer>
