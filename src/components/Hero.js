@@ -79,6 +79,7 @@ const HeroVideo = () => (
         autoPlay
         disableremoteplayback="true"
         poster={heroPosterMobile}
+        preload="auto"
       >
         <source src={heroVideoMobile} type="video/mp4"/>
         {/* <source src={heroVideoWEBM} /> */}
