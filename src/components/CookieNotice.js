@@ -3,6 +3,8 @@ import CookieConsent from "react-cookie-consent"
 // import { Link } from "gatsby"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
+// in your cookie banner
+// import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
 
 const StyledContainer = styled.div`
   max-width: 100%;
@@ -65,7 +67,7 @@ const CookieNotice = () => (
       debug={false}
       location="bottom"
       buttonText="Akzeptieren"
-      cookieName="ThePioneerCookieNoticeAccepted"
+      cookieName="gatsby-gdpr-google-tagmanager"
       style={{
         background: "#1f1f1f",
         color: "#fff",
