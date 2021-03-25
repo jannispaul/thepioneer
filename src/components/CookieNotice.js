@@ -3,7 +3,8 @@ import CookieConsent from "react-cookie-consent"
 // import { Link } from "gatsby"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
-// in your cookie banner
+// GDPR Cookies
+// import { useLocation } from "@reach/router" // this helps tracking the location
 // import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
 
 const StyledContainer = styled.div`
@@ -64,10 +65,13 @@ const StyledContainer = styled.div`
 const CookieNotice = () => (
   <StyledContainer>
     <CookieConsent
-      debug={false}
+      debug={true}
       location="bottom"
       buttonText="Akzeptieren"
       cookieName="gatsby-gdpr-google-analytics"
+      // onAccept={() => {
+      //   initializeAndTrack()
+      // }}
       style={{
         background: "#1f1f1f",
         color: "#fff",
