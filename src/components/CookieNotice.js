@@ -67,7 +67,7 @@ const CookieNotice = () => (
       debug={false}
       location="bottom"
       buttonText="Akzeptieren"
-      cookieName="gatsby-gdpr-google-tagmanager"
+      cookieName="gatsby-gdpr-google-analytics"
       style={{
         background: "#1f1f1f",
         color: "#fff",
