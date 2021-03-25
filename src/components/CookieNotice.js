@@ -65,7 +65,7 @@ const StyledContainer = styled.div`
 const CookieNotice = () => (
   <StyledContainer>
     <CookieConsent
-      debug={true}
+      debug={false}
       location="bottom"
       buttonText="Akzeptieren"
       cookieName="gatsby-gdpr-google-analytics"
