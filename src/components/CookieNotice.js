@@ -4,8 +4,8 @@ import CookieConsent from "react-cookie-consent"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 // GDPR Cookies
-// import { useLocation } from "@reach/router" // this helps tracking the location
-// import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
+import { useLocation } from "@reach/router" // this helps tracking the location
+import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
 
 const StyledContainer = styled.div`
   max-width: 100%;
@@ -69,9 +69,9 @@ const CookieNotice = () => (
       location="bottom"
       buttonText="Akzeptieren"
       cookieName="gatsby-gdpr-google-analytics"
-      // onAccept={() => {
-      //   initializeAndTrack()
-      // }}
+      onAccept={() => {
+        initializeAndTrack(useLocation)
+      }}
       style={{
         background: "#1f1f1f",
         color: "#fff",
