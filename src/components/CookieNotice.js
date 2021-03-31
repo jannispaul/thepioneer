@@ -70,7 +70,7 @@ const CookieNotice = () => (
       buttonText="Akzeptieren"
       cookieName="gatsby-gdpr-google-analytics"
       onAccept={() => {
-        initializeAndTrack()
+        initializeAndTrack(useLocation)
       }}
       style={{
         background: "#1f1f1f",
