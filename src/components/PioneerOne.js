@@ -67,12 +67,11 @@ const PioneerOne = () => (
       <PioneerHeadline color="#1f1f1f">One</PioneerHeadline>
       <h2>Live-Journalismus im Herzen der Hauptstadt</h2>
       <p>
-        Herzlich Willkommen auf ThePioneer One. An Bord des ersten
-        Redaktionsschiffs der Welt begeben wir uns auf eine Expedition in die
-        Erkenntnis und suchen gemeinsam nach unbequemen Wahrheiten. Nach den
-        Corona-Einschränkungen diskutieren wir gemeinsam mit Ihnen – und
-        verwandeln den schwimmenden Newsroom so zum demokratischsten Ort des
-        Landes.
+        Herzlich willkommen auf ThePioneer One. An Bord des ersten Medienschiffs
+        der Welt begeben wir uns täglich auf eine Expedition in die Erkenntnis
+        und suchen gemeinsam nach unbequemen Wahrheiten. Als Pioneer sind Sie in
+        unserem schwimmenden Newsroom herzlich willkommen – digital oder live an
+        Bord.
       </p>
       <PioneerButton subline></PioneerButton>
     </ContentContainer>

@@ -17,7 +17,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "originals/beyond-the-obvious.jpg" }) {
+        file(relativePath: { eq: "originals/world-briefing.jpg" }) {
           childImageSharp {
             fixed(width: 400) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG

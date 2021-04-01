@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 import PioneerButton from "./PioneerButton"
-import lock from "../images/svgs/lock.svg"
+import medal from "../images/svgs/medal.svg"
 import noAds from "../images/svgs/no-ads.svg"
 
 const StyledSection = styled.section`
@@ -93,14 +93,15 @@ const PrivacyAndAds = () => (
   <StyledSection>
     <StyledHalf>
       <div>
-        <img src={lock} alt="Sicherheitsschloss Icon" />{" "}
-        <StyledHeadline>Privacy</StyledHeadline>
+        <img src={medal} alt="Sicherheitsschloss Icon" />{" "}
+        <StyledHeadline>Beteiligung</StyledHeadline>
         <p>
-          Wir schreiben Datenschutz groß und deshalb erheben wir auf{" "}
-          <a href="https://thepioneer.de">ThePioneer.de</a> lediglich dann
-          Daten, wenn sie dazu beitragen die Webseite nutzerfreundlicher,
-          effektiver und sicherer zu machen. Seien Sie sich gewiss, dass wir
-          Ihre Daten niemals an Dritte verkaufen.
+          Neben der Pioneer-Mitgliedschaft bieten wir viele weitere
+          Möglichkeiten an, den Ausbau unserer journalistischen Crew zu
+          unterstützen, z.B. im exklusiven Supporter Club für die Top
+          100-Unterstützer*innen unserer journalistischen Mission oder als{" "}
+          <a href="https://mediapioneer.com/shareholder/">Leseraktionär</a> der
+          Media Pioneer Publishing AG.
         </p>
       </div>
     </StyledHalf>
