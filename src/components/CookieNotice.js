@@ -7,6 +7,12 @@ import { device } from "../theme/breakpoints"
 import { useLocation } from "@reach/router" // this helps tracking the location
 import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
 
+import Cookies from "universal-cookie"
+const cookies = new Cookies()
+// cookies.set('myCat', 'Pacman', { path: '/' });
+// console.log(cookies.get('myCat')); // Pacman
+// Cookies.set("gatsby-gdpr-google-tagmanager", "true", { path: "/" })
+
 const StyledContainer = styled.div`
   max-width: 100%;
 
@@ -70,6 +76,7 @@ const CookieNotice = () => (
       buttonText="Akzeptieren"
       cookieName="gatsby-gdpr-google-analytics"
       onAccept={() => {
+        cookies.set("gatsby-gdpr-google-tagmanager", "true", { path: "/" })
         initializeAndTrack(useLocation)
       }}
       style={{
