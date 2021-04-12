@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 import GaborAndMichaelImage from "./ImageComponents/GaborAndMichaelImage"
-import PioneerLogo from "./PioneerLogo"
 import PioneerButton from "./PioneerButton"
 import checkmark from "../images/svgs/checkmark.svg"
 import micImage from "../images/pngs/mikrofon.png"
@@ -12,6 +11,7 @@ import microphone from "../images/svgs/microphone.svg"
 import rocket from "../images/svgs/rocket.svg"
 import pencil from "../images/svgs/pencil.svg"
 import chart from "../images/svgs/chart.svg"
+import gabor from "../images/gabor-icon.png"
 
 const StyledSection = styled.section`
   background: #f8f6fd;
@@ -155,6 +155,12 @@ const StyledContainer = styled.div`
     }
   }
 `
+const StyledImage = styled.img`
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+`
 
 const PioneerJournalism = (props) => (
   <StyledSection>
@@ -173,7 +179,10 @@ const PioneerJournalism = (props) => (
         <Benefits>
           <div>
             <div>
-              <img src={ship} alt="" />
+              <StyledImage
+                src={gabor}
+                alt="Gesicht eines Mannes – Gabor Steingart"
+              />
             </div>
             <span>
               <b>Steingarts Morning Briefing</b> <br />
@@ -182,7 +191,7 @@ const PioneerJournalism = (props) => (
           </div>
           <div>
             <div>
-              <img src={microphone} alt="" />
+              <img src={microphone} alt="Mikrofon-Icon" />
             </div>
             <span>
               <b>Alle Briefings & Podcasts</b>
@@ -192,7 +201,7 @@ const PioneerJournalism = (props) => (
           </div>
           <div>
             <div>
-              <img src={ship} alt="" />
+              <img src={ship} alt="Schiff-Icon" />
             </div>
             <span>
               <b>Live-Journalismus</b>
@@ -202,7 +211,7 @@ const PioneerJournalism = (props) => (
           </div>
           <div>
             <div>
-              <img src={pencil} alt="" />
+              <img src={pencil} alt="Stift-Icon" />
             </div>
             <span>
               <b>ThePioneer Expert</b>
@@ -212,7 +221,7 @@ const PioneerJournalism = (props) => (
           </div>
           <div>
             <div>
-              <img src={chart} alt="" />
+              <img src={chart} alt="Diagramm-Icon" />
             </div>
             <span>
               <b>>2.500 Infografiken</b> <br />
@@ -221,7 +230,7 @@ const PioneerJournalism = (props) => (
           </div>
           <div>
             <div>
-              <img src={rocket} alt="" />
+              <img src={rocket} alt="Raketen-Icon" />
             </div>
             <span>
               <b>Unterstützung</b> <br />

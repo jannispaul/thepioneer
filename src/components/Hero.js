@@ -1,12 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import PioneerButton from "./PioneerButton"
 import { device } from "../theme/breakpoints"
 import heroVideo from "../images/hero-cinemagraph.mp4"
 import heroVideoMobile from "../images/hero-cinemagraph-mobile.mp4"
 // import heroVideoWEBM from "../images/hero.webm"
- import heroPoster from "../images/hero-cinemagraph.jpg"
- import heroPosterMobile from "../images/hero-cinemagraph-mobile.jpg"
+import heroPoster from "../images/hero-cinemagraph.jpg"
+import heroPosterMobile from "../images/hero-cinemagraph-mobile.jpg"
 
 const StyledSection = styled.section`
   display: block;
@@ -18,11 +17,8 @@ const Container = styled.div`
   max-width: 100%;
   margin: auto;
   height: 100vw;
-  /* height: 80vh; */
 
   video {
-    /* position: absolute; */
-    /* min-width: 100%; */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -44,35 +40,11 @@ const Container = styled.div`
     }
   }
 `
-const StyledH1 = styled.h1``
-const VideoContainer = styled.div`
-  position: relative;
-  width: 100%;
-  @media ${device.tablet} {
-    width: 50%;
-    order: 2;
-  }
-`
-const ContentContainer = styled.div`
-  @media ${device.tablet} {
-    order: 1;
-    max-width: 50%;
-  }
-`
-// const ShipContainer = styled.div`
-//   @media ${device.tablet} {
-//     order: 3;
-//     width: 100%;
-//     margin-top: -50px;
-//     margin-bottom: -20px;
-//   }
-// `
 
 const HeroVideo = () => (
   <StyledSection>
-    {/* <HeroImage></HeroImage> */}
     <Container>
-     <video
+      <video
         loop
         muted
         playsInline
@@ -81,8 +53,7 @@ const HeroVideo = () => (
         poster={heroPosterMobile}
         preload="auto"
       >
-        <source src={heroVideoMobile} type="video/mp4"/>
-        {/* <source src={heroVideoWEBM} /> */}
+        <source src={heroVideoMobile} type="video/mp4" />
       </video>
       <video
         loop
@@ -92,17 +63,8 @@ const HeroVideo = () => (
         disableremoteplayback="true"
         poster={heroPoster}
       >
-        <source src={heroVideo} type="video/mp4"/>
-        {/* <source src={heroVideoWEBM} /> */}
+        <source src={heroVideo} type="video/mp4" />
       </video>
-     
-      {/* <ContentContainer>
-        <StyledH1>Wahrheit gibt es nur zu zweien.</StyledH1>
-        <p>
-          Zusammen mit Ihnen. Gemeinsam können wir den Journalismus neu beleben.
-        </p>
-        <PioneerButton subline></PioneerButton>
-      </ContentContainer> */}
     </Container>
   </StyledSection>
 )
