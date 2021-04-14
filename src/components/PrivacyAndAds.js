@@ -98,8 +98,9 @@ const PrivacyAndAds = () => (
         <p>
           Neben der Pioneer-Mitgliedschaft bieten wir viele weitere
           Möglichkeiten an, den Ausbau unserer journalistischen Crew zu
-          unterstützen, z.B. im exklusiven Supporter Club für die Top
-          100-Unterstützer*innen unserer journalistischen Mission oder als{" "}
+          unterstützen, z.B. im exklusiven{" "}
+          <a href="https://support.thepioneer.de/">Supporter Club</a> für die
+          Top 100-Unterstützer*innen unserer journalistischen Mission oder als{" "}
           <a href="https://mediapioneer.com/shareholder/">Leseraktionär</a> der
           Media Pioneer Publishing AG.
         </p>
