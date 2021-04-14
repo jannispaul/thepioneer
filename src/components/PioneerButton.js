@@ -35,6 +35,7 @@ const StyledButton = styled.a`
   color: ${(props) => (props.color ? props.color : "#fff")};
   background: ${(props) => (props.background ? props.background : "#1f1f1f")};
   transition: background 0.2s ease;
+  border-radius: 4px;
 
   span {
     white-space: pre;

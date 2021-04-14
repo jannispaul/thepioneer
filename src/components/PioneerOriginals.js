@@ -6,7 +6,7 @@ import PioneerHeadline from "./PioneerHeadline"
 
 import WallStreetDailyImage from "../components/ImageComponents/Originals/WallStreetDailyImage"
 import UeberstundeImage from "../components/ImageComponents/Originals/UeberstundeImage"
-import BeyondTheObviousImage from "../components/ImageComponents/Originals/BeyondTheObviousImage"
+import WorldBriefingImage from "../components/ImageComponents/Originals/WorldBriefingImage"
 import MorningBriefingImage from "../components/ImageComponents/Originals/MorningBriefingImage"
 import HauptstadtBriefingImage from "../components/ImageComponents/Originals/HauptstadtBriefingImage"
 import TechBriefingImage from "../components/ImageComponents/Originals/TechBriefingImage"
@@ -52,6 +52,13 @@ const PioneerOriginals = () => (
         <MorningBriefingImage></MorningBriefingImage>
       </a>
       <a
+        href="https://www.thepioneer.de/originals/world-briefing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <WorldBriefingImage></WorldBriefingImage>
+      </a>
+      <a
         href="https://www.thepioneer.de/originals/wall-street-daily"
         target="_blank"
         rel="noopener noreferrer"
@@ -64,27 +71,6 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <UeberstundeImage></UeberstundeImage>
-      </a>
-      <a
-        href="https://www.thepioneer.de/originals/beyond-the-obvious"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <BeyondTheObviousImage></BeyondTheObviousImage>
-      </a>
-      <a
-        href="https://www.thepioneer.de/originals/der-achte-tag"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <DerAchteTagImage></DerAchteTagImage>
-      </a>
-      <a
-        href="https://www.thepioneer.de/originals/hauptstadt-das-briefing"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <HauptstadtBriefingImage></HauptstadtBriefingImage>
       </a>
       <a
         href="https://www.thepioneer.de/originals/tech-briefing"
@@ -106,6 +92,20 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <ShowroomImage></ShowroomImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/der-achte-tag"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <DerAchteTagImage></DerAchteTagImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/hauptstadt-das-briefing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <HauptstadtBriefingImage></HauptstadtBriefingImage>
       </a>
     </Slider>
   </StyledSection>

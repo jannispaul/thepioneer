@@ -79,7 +79,7 @@ const StyledIframe = styled.iframe`
   }
 `
 
-const PioneerJournalism = props => (
+const PioneerJournalism = (props) => (
   <StyledSection>
     <StyledContainer>
       <img src={confettiImage} alt="Bleistift" />
@@ -98,11 +98,9 @@ const PioneerJournalism = props => (
       ></StyledIframe>
       <p>
         Verliert der Journalismus an Vitalität, verliert auch die Demokratie.
-        Wir wollen das Selbstgespräch der Medien beenden und die Starrköpfigkeit
-        ihrer Macher aufbrechen. Die Meinung des anderen gehört nicht verboten,
-        auch nicht diffamiert oder ausgegrenzt, sondern zelebriert. Wir machen
-        uns auf, den Journalismus mit Unabhängigkeit und frischem Geist neu zu
-        beleben.
+        Wir wollen das Selbstgespräch der Medien beenden. Die Meinung des
+        anderen gehört nicht verboten, sondern zelebriert. Wir machen uns auf,
+        den Journalismus mit Unabhängigkeit und frischem Geist neu zu beleben.
       </p>
       <PioneerButton subline></PioneerButton>
     </StyledContainer>

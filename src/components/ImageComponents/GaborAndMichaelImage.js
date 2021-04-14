@@ -7,12 +7,12 @@ import { device } from "../../theme/breakpoints"
 const StyledImage = styled(Img)`
   height: 65vw;
   @media ${device.tablet} {
-    height: 450px;
+    height: 65vh;
     margin: 0 -32px;
   }
   @media ${device.laptop} {
     width: 50vw;
-    height: 100%;
+    /* height: 100%; */
     margin-left: calc(-50vw + 540px);
     margin-right: 100px;
   }
@@ -33,12 +33,12 @@ const GaborAndMichaelImage = () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const image = data.gaborAndMichaelImage.childImageSharp
       return (
         <StyledImage
           fluid={image.fluid}
-          imgStyle={{ objectFit: "cover" }}
+          imgStyle={{ objectFit: "cover", objectPosition: "90%" }}
           alt="Gabor Steingart und Michael Bröcker"
         />
       )
