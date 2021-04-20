@@ -7,13 +7,13 @@ import "../theme/styles.css"
 
 import Navigation from "./Navigation"
 import Footer from "./Footer"
-import CookieNotice from "../components/CookieNotice"
+// import CookieNotice from "../components/CookieNotice"
 
 const StyledMain = styled.div`
   overflow: hidden;
 `
 
-const Layout = props => {
+const Layout = (props) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -26,7 +26,7 @@ const Layout = props => {
 
   return (
     <div>
-      <CookieNotice></CookieNotice>
+      {/* <CookieNotice></CookieNotice> */}
       <Navigation></Navigation>
       <StyledMain>{props.children}</StyledMain>
       <Footer></Footer>
