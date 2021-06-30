@@ -13,6 +13,8 @@ import TechBriefingImage from "../components/ImageComponents/Originals/TechBrief
 import DerAchteTagImage from "../components/ImageComponents/Originals/DerAchteTagImage"
 import RaceToTheWhiteHouseImage from "../components/ImageComponents/Originals/RaceToTheWhiteHouseImage"
 import ShowroomImage from "../components/ImageComponents/Originals/ShowroomImage"
+import OekonomieBriefingImage from "../components/ImageComponents/Originals/OekonomieBriefingImage"
+import SecurityBriefingImage from "../components/ImageComponents/Originals/SecurityBriefingImage"
 
 const StyledSection = styled.section`
   background: #1f1f1f;
@@ -64,6 +66,20 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <WallStreetDailyImage></WallStreetDailyImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/security-briefing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <SecurityBriefingImage></SecurityBriefingImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/feld-und-haucap"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <OekonomieBriefingImage></OekonomieBriefingImage>
       </a>
       <a
         href="https://www.thepioneer.de/originals/die-ueberstunde"
