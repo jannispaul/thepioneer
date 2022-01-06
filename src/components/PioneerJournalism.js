@@ -7,6 +7,7 @@ import checkmark from "../images/svgs/checkmark.svg"
 import micImage from "../images/pngs/mikrofon.png"
 import PioneerHeadline from "./PioneerHeadline"
 import ship from "../images/svgs/ship.svg"
+import envelope from "../images/svgs/envelope.svg"
 import microphone from "../images/svgs/microphone.svg"
 import rocket from "../images/svgs/rocket.svg"
 import pencil from "../images/svgs/pencil.svg"
@@ -191,7 +192,7 @@ const PioneerJournalism = (props) => (
           </div>
           <div>
             <div>
-              <img src={microphone} alt="Mikrofon-Icon" />
+              <img src={envelope} alt="Brief-Icon" />
             </div>
             <span>
               <b>Alle Briefings & Podcasts</b>
@@ -235,6 +236,16 @@ const PioneerJournalism = (props) => (
             <span>
               <b>Unterstützung</b> <br />
               neuer journalistischer Pioneer-Projekte
+            </span>
+          </div>
+          <div>
+            <div>
+              <img src={microphone} alt="Mikrofon-Icon" />
+            </div>
+            <span>
+              <b>Podcast App</b>
+              <br />
+              alle Podcasts in der ThePioneer App
             </span>
           </div>
         </Benefits>
