@@ -20,7 +20,7 @@ const HeroImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        heroImage: file(relativePath: { eq: "hero-cover.jpg" }) {
+        heroImage: file(relativePath: { eq: "hero-ship.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 2400, quality: 70) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -35,7 +35,7 @@ const HeroImage = () => (
         <StyledImage
           fluid={image.fluid}
           imgStyle={{ objectFit: "cover", objectPosition: "top center" }}
-          alt="ThePioneer-Team schweben in Formation über Berlin und den Globus "
+          alt="ThePioneer-Team über Medienschiff ThePioneer One "
         />
       )
     }}
