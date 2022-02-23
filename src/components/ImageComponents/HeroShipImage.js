@@ -24,7 +24,7 @@ const StyledImage = styled(Img)`
   }
 `
 
-const HeroPlaceHolderImage = () => (
+const HeroShipImage = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -49,4 +49,4 @@ const HeroPlaceHolderImage = () => (
     }}
   />
 )
-export default HeroPlaceHolderImage
+export default HeroShipImage
