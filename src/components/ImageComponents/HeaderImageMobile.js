@@ -5,20 +5,18 @@ import styled from "styled-components"
 import { device } from "../../theme/breakpoints"
 
 const StyledImage = styled(Img)`
-display: none;
-@media ${device.laptop} {
-  display: block;
-}
- 
+  @media ${device.laptop} {
+    display: none;
+  }
 `
 
-const HeaderImage = () => (
+const HeaderImageMobile = () => (
   <StaticQuery
     query={graphql`
       query {
-        headerImage: file(relativePath: { eq: "header.jpg" }) {
+        headerImageMobile: file(relativePath: { eq: "header-mobile.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 2400, quality: 70) {
+            fluid(maxWidth: 1400, quality: 70) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
@@ -26,7 +24,7 @@ const HeaderImage = () => (
       }
     `}
     render={data => {
-      const image = data.headerImage.childImageSharp
+      const image = data.headerImageMobile.childImageSharp
       return (
         <StyledImage
           fluid={image.fluid}
@@ -37,4 +35,4 @@ const HeaderImage = () => (
     }}
   />
 )
-export default HeaderImage
+export default HeaderImageMobile

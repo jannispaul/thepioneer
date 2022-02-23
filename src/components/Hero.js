@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 import HeaderImage from "./ImageComponents/HeaderImage"
+import HeaderImageMobile from "./ImageComponents/HeaderImageMobile"
 
 const StyledSection = styled.section`
   display: block;
@@ -20,6 +21,7 @@ const Container = styled.div`
 const HeroVideo = () => (
   <StyledSection>
     <Container>
+      <HeaderImageMobile></HeaderImageMobile>
       <HeaderImage></HeaderImage>
     </Container>
   </StyledSection>
