@@ -7,7 +7,7 @@ import PioneerHeadline from "./PioneerHeadline"
 import WallStreetDailyImage from "../components/ImageComponents/Originals/WallStreetDailyImage"
 import UeberstundeImage from "../components/ImageComponents/Originals/UeberstundeImage"
 import WorldBriefingImage from "../components/ImageComponents/Originals/WorldBriefingImage"
-import MorningBriefingImage from "../components/ImageComponents/Originals/MorningBriefingImage"
+import PioneerBriefingImage from "../components/ImageComponents/Originals/PioneerBriefingImage"
 import HauptstadtBriefingImage from "../components/ImageComponents/Originals/HauptstadtBriefingImage"
 import TechBriefingImage from "../components/ImageComponents/Originals/TechBriefingImage"
 import DerAchteTagImage from "../components/ImageComponents/Originals/DerAchteTagImage"
@@ -47,11 +47,11 @@ const PioneerOriginals = () => (
     </PioneerHeadline>
     <Slider>
       <a
-        href="https://www.thepioneer.de/originals/morning-briefing"
+        href="http://www.thepioneer.de/originals/thepioneer-briefing-business-class-edition"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <MorningBriefingImage></MorningBriefingImage>
+        <PioneerBriefingImage></PioneerBriefingImage>
       </a>
       <a
         href="https://www.thepioneer.de/originals/world-briefing"
