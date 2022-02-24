@@ -3,14 +3,15 @@ import styled from "styled-components"
 import { device } from "../theme/breakpoints"
 import GaborAndMichaelImage from "./ImageComponents/GaborAndMichaelImage"
 import PioneerButton from "./PioneerButton"
-import checkmark from "../images/svgs/checkmark.svg"
+// import checkmark from "../images/svgs/checkmark.svg"
 import micImage from "../images/pngs/mikrofon.png"
 import PioneerHeadline from "./PioneerHeadline"
-import ship from "../images/svgs/ship.svg"
-import envelope from "../images/svgs/envelope.svg"
-import microphone from "../images/svgs/microphone.svg"
-import rocket from "../images/svgs/rocket.svg"
-import pencil from "../images/svgs/pencil.svg"
+import live from "../images/svgs/live.svg"
+import play from "../images/svgs/play.svg"
+import newsletter from "../images/svgs/newsletter.svg"
+import podcast from "../images/svgs/podcast.svg"
+import check from "../images/svgs/check.svg"
+import smiley from "../images/svgs/smiley.svg"
 import chart from "../images/svgs/chart.svg"
 import gabor from "../images/gabor-icon.png"
 
@@ -29,138 +30,174 @@ const StyledSection = styled.section`
       margin: auto;
       align-items: center;
     }
+  
   }
 `
 const Benefits = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
-  margin: 20px 0 40px;
+  grid-template-columns: auto auto;
   grid-gap: 20px;
   font-size: 14px;
-
+  justify-content: center;
+  margin-bottom: 2rem;
+  
+  
+  &>div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
   @media ${device.mobileL} {
     font-size: 16px;
   }
-
   @media ${device.tablet} {
-    grid-template-columns: 1.1fr 1fr;
-    margin: 20px 0 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+
   }
 
+  @media ${device.laptop} {
+    justify-content: flex-start;
+
+    &>div{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+`
+const BenefitCircles = styled.div`
+  display: flex;
   & > div {
     display: flex;
     align-items: center;
+    background: #ebe0fa;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: 3px solid #f8f6fe;
+    position: relative;
+    z-index:1;
 
-    & b {
-      font-weight: 600;
+    :nth-of-type(2){
+      z-index:0;
+      margin-left: -10px;
     }
-    & > div {
-      background: #ebe0fa;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      margin-right: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
+    @media ${device.mobileM} {
+      width: 70px;
+      height: 70px;
+    }
+    & > img {
+      width: 20px;
+      max-height: 22px;
       @media ${device.mobileM} {
-        width: 70px;
-        height: 70px;
-      }
-      & > img {
-        width: 20px;
-        max-height: 22px;
-        @media ${device.mobileM} {
-          width: 28px;
-          max-height: 34px;
-        }
+        width: 28px;
+        max-height: 34px;
       }
     }
   }
 `
+
+const BenefitCopy = styled.p`
+  text-align: center;
+  font-weight: 600;
+  font-family: Poppins;
+  font-size: 14px;
+
+  & > span {
+    :nth-of-type(2){
+      color: #6622c3;
+    }
+  }
+
+  @media ${device.tablet} {
+  font-size: 16px;
+  }
+  @media ${device.laptop} {
+    text-align: left;
+  }
+`
 const BenefitsHeadline = styled.h3`
+  text-align: center;
   font-family: Poppins;
   text-transform: uppercase;
   font-size: 18px;
   color: #6622c3;
   font-weight: 600;
+  margin-bottom: 2rem;
+
+    @media ${device.laptop} {
+      text-align: left;
+    }
+
 `
+
+
 const StyledContainer = styled.div`
   padding: 40px 16px;
   position: relative;
 
   & > img {
-    position: absolute;
-    right: 0;
-    width: 60px;
-    top: 100px;
-    z-index: 0;
-  }
+  position: absolute;
+  right: 0;
+  width: 60px;
+  top: 100px;
+  z-index: 0;
+}
 
   & p {
-    margin-bottom: 20px;
-    max-width: 700px;
-    z-index: 1;
-    position: relative;
+  margin-bottom: 20px;
+  max-width: 700px;
+  z-index: 1;
+  position: relative;
+}
+
+ 
+@media ${device.tablet} {
+  padding: 40px 0;
+    & li {
+    font-size: 18px;
   }
+    & > img {
+    margin-right: -32px;
+    width: 15vw;
+    top: 50px;
+  }
+}
+@media ${device.laptop} {
+  max-width: 55%;
 
   & li {
-    font-weight: 600;
-    padding-left: 24px;
-    margin-bottom: 20px;
+    font-size: 19px;
+  }
 
-    :last-of-type {
-      margin-bottom: 32px;
-    }
-    span {
-      font-family: " Poppins ", " Open Sans
-        ", -apple-system,
-        BlinkMacSystemFont, Arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
+  & > img {
+    position: absolute;
+    right: calc(580px - 50vw);
+    width: 15vw;
+    top: 100px;
   }
-  & li::before {
-    margin-left: -24px;
-    content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
-    background: no-repeat 0 1px url(${checkmark});
-    background-size: 16px 16px;
-    display: inline-block;
-    margin-right: 8px;
-  }
-  @media ${device.tablet} {
-    padding: 40px 0;
-    & li {
-      font-size: 18px;
-    }
-    & > img {
-      margin-right: -32px;
-      width: 15vw;
-      top: 50px;
-    }
-  }
-  @media ${device.laptop} {
-    max-width: 55%;
-    & li {
-      font-size: 19px;
-    }
-    & > img {
-      position: absolute;
-      right: calc(580px - 50vw);
-      width: 15vw;
-      top: 100px;
-    }
-  }
+}
 `
 const StyledImage = styled.img`
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
+  width: 100 % !important;
+  height: 100 % !important;
+  max-width: 100 % !important;
+  max-height: 100 % !important;
+
+`
+const StyledButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media ${device.laptop} {
+    display: block;
+  }
+
 `
 
 const PioneerJournalism = (props) => (
@@ -179,92 +216,114 @@ const PioneerJournalism = (props) => (
         <BenefitsHeadline>Ihre Vorteile als Pioneer</BenefitsHeadline>
         <Benefits>
           <div>
-            <div>
-              <StyledImage
-                src={gabor}
-                alt="Gesicht eines Mannes – Gabor Steingart"
-              />
-            </div>
-            <span>
-              <b>Steingarts Morning Briefing</b> <br />
-              inklusive aller Spezial-Inhalte
-            </span>
+            <BenefitCircles>
+              <div>
+                <StyledImage
+                  src={gabor}
+                  alt="Gesicht eines Mannes – Gabor Steingart"
+                />
+              </div>
+            </BenefitCircles>
+            <BenefitCopy>
+              <span>
+                <b>100% Steingart</b> <br />
+              </span>
+              <span>
+                in Text, Audio & Video
+              </span>
+            </BenefitCopy>
           </div>
           <div>
-            <div>
-              <img src={envelope} alt="Brief-Icon" />
-            </div>
-            <span>
-              <b>Alle Briefings & Podcasts</b>
-              <br />
-              wie Tech, Hauptstadt oder World Briefing 
-            </span>
+            <BenefitCircles>
+              <div>
+                <img src={newsletter} alt="Brief-Icon" />
+              </div>
+              <div>
+                <img src={podcast} alt="Brief-Icon" />
+              </div>
+            </BenefitCircles>
+            <BenefitCopy>
+              <span>
+                <b>Freier Zugriff auf</b>
+                <br />
+              </span>
+              <span>
+                Website & App
+              </span>
+            </BenefitCopy>
           </div>
           <div>
-            <div>
-              <img src={ship} alt="Schiff-Icon" />
-            </div>
-            <span>
-              <b>Live-Journalismus</b>
-              <br />
-              auf dem ersten Medienschiff der Welt
-            </span>
+            <BenefitCircles>
+              <div>
+                <img src={live} alt="Schiff-Icon" />
+              </div>
+              <div>
+                <img src={play} alt="Schiff-Icon" />
+              </div>
+            </BenefitCircles>
+            <BenefitCopy>
+              <span>
+                <b>Live-Journalismus</b>
+                <br />
+              </span>
+              <span>
+                auf Medienschiff
+              </span>
+            </BenefitCopy>
           </div>
           <div>
-            <div>
-              <img src={pencil} alt="Stift-Icon" />
-            </div>
-            <span>
-              <b>ThePioneer Expert</b>
-              <br />
-              werden und eigene Inhalte publizieren
-            </span>
+            <BenefitCircles>
+              <div>
+                <img src={chart} alt="Stift-Icon" />
+              </div>
+            </BenefitCircles>
+            <BenefitCopy>
+              <span>
+                <b>Über 2.500</b>
+                <br />
+              </span>
+              <span>
+                Infografiken
+              </span>
+            </BenefitCopy>
           </div>
           <div>
-            <div>
-              <img src={chart} alt="Diagramm-Icon" />
-            </div>
-            <span>
-              <b>>2.500 Infografiken</b> <br />
-              im digitalen Graphic-Hub
-            </span>
+            <BenefitCircles>
+              <div>
+                <img src={smiley} alt="Diagramm-Icon" />
+              </div>
+            </BenefitCircles>
+            <BenefitCopy>
+              <span>
+                <b>Ihr Autorenprofil</b> <br />
+              </span>
+              <span>
+                als Pioneer Expert
+              </span>
+            </BenefitCopy>
           </div>
           <div>
-            <div>
-              <img src={rocket} alt="Raketen-Icon" />
-            </div>
-            <span>
-              <b>Unterstützung</b> <br />
-              neuer journalistischer Pioneer-Projekte
-            </span>
-          </div>
-          <div>
-            <div>
-              <img src={microphone} alt="Mikrofon-Icon" />
-            </div>
-            <span>
-              <b>Podcast App</b>
-              <br />
-              alle Podcasts in der ThePioneer App
-            </span>
+            <BenefitCircles>
+              <div>
+                <img src={check} alt="Raketen-Icon" />
+              </div>
+            </BenefitCircles>
+            <BenefitCopy>
+              <span>
+                <b>Unabhängig &</b> <br />
+              </span>
+              <span>
+                100% werbefrei
+              </span>
+            </BenefitCopy>
           </div>
         </Benefits>
-        {/* <ul>
-          <li>Täglich neue Briefings, Podcasts, Graphics und Live-Inhalte</li>
-          <li>
-            Exklusiver Live-Journalismus auf dem ersten Redaktionsschiff der
-            Welt – <PioneerLogo width="100px"></PioneerLogo> <span>One</span>
-          </li>
-          <li>
-            Publikation eigener Inhalte als verifizierter{" "}
-            <PioneerLogo width="100px"></PioneerLogo> Expert
-          </li>
-          <li>Unterstützung neuer journalistischer Projekte</li>
-        </ul>*/}
-        <PioneerButton subline></PioneerButton>
+        <StyledButtonContainer>
+          <PioneerButton subline></PioneerButton>
+        </StyledButtonContainer>
       </StyledContainer>
     </div>
-  </StyledSection>
+  </StyledSection >
 )
 
 export default PioneerJournalism
