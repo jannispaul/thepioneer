@@ -17,7 +17,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "originals/race-to-the-white-house.jpg" }) {
+        file(relativePath: { eq: "originals/edle-federn.jpg" }) {
           childImageSharp {
             fixed(width: 400) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
@@ -31,7 +31,7 @@ export default () => (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
-          alt="Mann in Anzug vor einer Karte der USA, die mit der Flagge gefüllt ist"
+          alt="Portrait einer Frau vor Bücherregalwänden"
         />
       )
     }}

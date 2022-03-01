@@ -17,7 +17,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "originals/wall-street-daily.jpg" }) {
+        file(relativePath: { eq: "originals/feld-haucap.jpg" }) {
           childImageSharp {
             fixed(width: 400) {
               ...GatsbyImageSharpFixed_withWebp_tracedSVG
@@ -31,7 +31,7 @@ export default () => (
         <StyledImage
           fixed={data.file.childImageSharp.fixed}
           imgStyle={{ objectFit: "cover" }}
-          alt="Frau steht vor den Wolkenkratzern an der Wallstreet"
+          alt="Moderatorenteam vor einem Hochhaus"
         />
       )
     }}

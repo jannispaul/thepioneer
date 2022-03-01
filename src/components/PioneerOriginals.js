@@ -4,14 +4,14 @@ import { device } from "../theme/breakpoints"
 import Slider from "../components/Slider"
 import PioneerHeadline from "./PioneerHeadline"
 
-import WallStreetDailyImage from "../components/ImageComponents/Originals/WallStreetDailyImage"
-import UeberstundeImage from "../components/ImageComponents/Originals/UeberstundeImage"
+import EdleFedernImage from "../components/ImageComponents/Originals/EdleFedernImage"
+import FeldHaucapImage from "../components/ImageComponents/Originals/FeldHaucapImage"
 import WorldBriefingImage from "../components/ImageComponents/Originals/WorldBriefingImage"
 import PioneerBriefingImage from "../components/ImageComponents/Originals/PioneerBriefingImage"
 import HauptstadtBriefingImage from "../components/ImageComponents/Originals/HauptstadtBriefingImage"
 import TechBriefingImage from "../components/ImageComponents/Originals/TechBriefingImage"
 import DerAchteTagImage from "../components/ImageComponents/Originals/DerAchteTagImage"
-import RaceToTheWhiteHouseImage from "../components/ImageComponents/Originals/RaceToTheWhiteHouseImage"
+import InvestmentBriefingImage from "../components/ImageComponents/Originals/InvestmentBriefingImage"
 import ShowroomImage from "../components/ImageComponents/Originals/ShowroomImage"
 import OekonomieBriefingImage from "../components/ImageComponents/Originals/OekonomieBriefingImage"
 import SecurityBriefingImage from "../components/ImageComponents/Originals/SecurityBriefingImage"
@@ -61,13 +61,6 @@ const PioneerOriginals = () => (
         <WorldBriefingImage></WorldBriefingImage>
       </a>
       <a
-        href="https://www.thepioneer.de/originals/wall-street-daily"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <WallStreetDailyImage></WallStreetDailyImage>
-      </a>
-      <a
         href="https://www.thepioneer.de/originals/security-briefing"
         target="_blank"
         rel="noopener noreferrer"
@@ -82,25 +75,11 @@ const PioneerOriginals = () => (
         <OekonomieBriefingImage></OekonomieBriefingImage>
       </a>
       <a
-        href="https://www.thepioneer.de/originals/die-ueberstunde"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <UeberstundeImage></UeberstundeImage>
-      </a>
-      <a
         href="https://www.thepioneer.de/originals/tech-briefing"
         target="_blank"
         rel="noopener noreferrer"
       >
         <TechBriefingImage></TechBriefingImage>
-      </a>
-      <a
-        href="https://www.thepioneer.de/originals/race-to-the-white-house/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <RaceToTheWhiteHouseImage></RaceToTheWhiteHouseImage>
       </a>
       <a
         href="https://www.thepioneer.de/originals/showroom/"
@@ -122,6 +101,27 @@ const PioneerOriginals = () => (
         rel="noopener noreferrer"
       >
         <HauptstadtBriefingImage></HauptstadtBriefingImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/edle-federn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <EdleFedernImage></EdleFedernImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/feld-und-haucap"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FeldHaucapImage></FeldHaucapImage>
+      </a>
+      <a
+        href="https://www.thepioneer.de/originals/investment-briefing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <InvestmentBriefingImage></InvestmentBriefingImage>
       </a>
     </Slider>
   </StyledSection>

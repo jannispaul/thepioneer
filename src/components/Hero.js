@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { device } from "../theme/breakpoints"
 import HeaderImage from "./ImageComponents/HeaderImage"
 import HeaderImageMobile from "./ImageComponents/HeaderImageMobile"
 
