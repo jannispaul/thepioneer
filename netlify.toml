@@ -7,13 +7,5 @@
   from = "/*"
   to = "https://www.thepioneer.de/originals/thepioneer-briefing-economy-edition/folgen"
   status = 302
-  
-[[redirects]]
-  from = "https://join.thepioneer.de"
-  to = "https://www.thepioneer.de/originals/thepioneer-briefing-economy-edition/folgen"
-  status = 302
-
-
-
-
+  force = true
 
