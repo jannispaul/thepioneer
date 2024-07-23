@@ -3,6 +3,10 @@
   to = " https://join.thepioneer.de/:splat"
   status = 301 
 
+[[redirects]]
+  from = "/*"
+  to = "https://www.thepioneer.de/originals/thepioneer-briefing-economy-edition/folgen"
+  status = 302
 
 
 
